@@ -3,9 +3,7 @@
 
 **Contributors:** Neomi Golkin & Shirel Cohen
 
----
-
-## 📑 Table of Contents
+### 📑 Table of Contents
 * [Phase 1: Design and Build the Database](#phase-1)
   * [Introduction](#introduction)
   * [ERD (Entity-Relationship Diagram)](#erd)
@@ -15,20 +13,17 @@
   * [Backup](#backup)
 * [Phase 2: Integration](#phase-2)
 
----
-
 ## Phase 1: Design and Build the Database <a name="phase-1"></a>
 
----
 
-## 📝 Project Overview <a name="introduction"></a>
+### 📝 Project Overview <a name="introduction"></a>
 The **Group Trip and Event Management System** is designed to efficiently manage information related to travel groups, professional guides, participants, and scheduled itineraries. 
 
 > This system ensures smooth organization and tracking of essential details such as group assignments, guide expertise, and real-time trip logistics.
 
 ---
 
-## 🎯 Purpose of the Database
+### 🎯 Purpose of the Database
 This database serves as a structured and reliable solution for travel agencies and tour operators to:
 
 * 📍 **Organize Travel Groups** – Link groups to specific participants and itineraries seamlessly.
@@ -39,7 +34,7 @@ This database serves as a structured and reliable solution for travel agencies a
 
 ---
 
-## 🚀 Potential Use Cases
+### 🚀 Potential Use Cases
 
 | Role | Responsibility |
 | :--- | :--- |
@@ -50,20 +45,20 @@ This database serves as a structured and reliable solution for travel agencies a
 
 ---
 
-# 💡 Summary
+### 💡 Summary
 This structured database helps **streamline tour and event operations**, improving logistical efficiency, guide-to-region matching, and communication among all stakeholders involved in group travel.
 
 
 -----
 
 
-# ERD (Entity-Relationship Diagram) <a name="erd"></a>
+### ERD (Entity-Relationship Diagram) <a name="erd"></a>
 <img width="4002" height="1533" alt="erdplus (8)" src="https://github.com/user-attachments/assets/2d23cf47-ea7d-44bd-a503-7845f65ac55e" />
 
-# DSD (Data Structure Diagram) <a name="dsd"></a>
+### DSD (Data Structure Diagram) <a name="dsd"></a>
 <img width="4002" height="1533" alt="erdplus (6)" src="https://github.com/user-attachments/assets/4d5fd525-376a-4f41-b061-05365b5e516b" />
 
-# SQL Scripts <a name="scripts"></a>
+### SQL Scripts <a name="scripts"></a>
 
 Provide the following SQL scripts:
 
@@ -79,24 +74,23 @@ Provide the following SQL scripts:
 * **Select All Data Script** - The SQL script for selecting all tables is available in the repository:
   📜 [selectAll_tables.sql](./Phase1/dropTables.sql)
   
-# Data
+### Data
 
-# First tool: using mockaro to create csv file
+#### First tool: using mockaro to create csv file
 [Entering a data to person table](./Phase1/scripts/method2/generateData)
 
 ![צילום מסך 2026-04-10 000653](https://github.com/user-attachments/assets/8171a2be-7bd2-4895-80ea-ac0c1bcc79c6)
-# Second tool: using python to create csv file
+#### Second tool: upload files.
 ![צילום מסך 2026-04-10 002617](https://github.com/user-attachments/assets/6dc98c86-0e73-413d-878b-2dbe6d6b76ba)
 
 
-# Third tool: using python to create csv file
+#### Third tool: using python to create csv files
 
 [Link to python file](./Phase1/scripts/method3/generateData/createTables.py)
 
 
-## Backup
+### Backup
 backups files are kept with the date and hour of the backup:
-עבור לתיקיית הגיבויים
 
 ## Phase 2: Integration
 
