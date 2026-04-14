@@ -89,8 +89,17 @@ Provide the following SQL scripts:
 [Link to python file](./Phase1/scripts/method3/generateData/createTables.py)
 
 
-### Backup
-backups files are kept with the date and hour of the backup:
+### Backup <a name="backup"></a>
+We performed a full logical backup of the database using the `pg_dump` command from within the Docker container. 
+The complete backup file is saved in the repository, timestamped with the creation date: 📜 [backup_14_04_2026.sql](./backup_14_04_2026.sql).
+
+To verify the integrity of the backup and the completeness of the data (with a focus on the tables containing 20,000 records), we created a separate, empty database named `test_restore_db` and successfully restored the backup file into it without any errors.
+
+**Backup Generation Process (Export):**
+<img width="469" height="39" alt="image" src="https://github.com/user-attachments/assets/c689f6f2-da89-477a-993f-ca8614577bf3" />
+
+**Data Restoration Process (Restore):**
+<img width="372" height="131" alt="image" src="https://github.com/user-attachments/assets/e0f9fc8c-6327-43b2-bbd0-d44e4eac927a" />
 
 ## Phase 2: Integration
 
