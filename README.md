@@ -89,18 +89,25 @@ Provide the following SQL scripts:
 [Link to python file](./Phase1/scripts/method3/generateData/createTables.py)
 
 
-### Backup <a name="backup"></a>
-We performed a full logical backup of the database using the `pg_dump` command from within the Docker container. 
-The complete backup file is saved in the repository, timestamped with the creation date: 📜 [backup_14_04_2026.sql](./backup_14_04_2026.sql).
+### Backup & Restoration <a name="backup"></a>
 
-To verify the integrity of the backup and the completeness of the data (with a focus on the tables containing 20,000 records), we created a separate, empty database named `test_restore_db` and successfully restored the backup file into it without any errors.
+To ensure the durability and reliability of the **TripsManager** system, we implemented a complete logical backup and restoration strategy. This process ensures that all data, including complex table relationships and constraints, are preserved.
 
-**Backup Generation Process (Export):**
-<img width="469" height="39" alt="image" src="https://github.com/user-attachments/assets/c689f6f2-da89-477a-993f-ca8614577bf3" />
+The full backup file, containing all schema definitions and records, is stored here:  
+[backup1.sql](./Backup/backup1.sql)
 
-**Data Restoration Process (Restore):**
-<img width="372" height="131" alt="image" src="https://github.com/user-attachments/assets/e0f9fc8c-6327-43b2-bbd0-d44e4eac927a" />
+#### The Verification Process
+We verified the backup by performing a full restore into a clean environment:
+1. **Export:** A logical dump was created using `pg_dump`.
+2. **Import:** The backup was restored into a separate database named `test_restore_db`.
+3. **Validation:** We confirmed that the row counts and foreign key constraints were fully intact.[cite: 1]
+
+**1. Backup Process Success:**  
+*Confirmation that the backup file was generated successfully without errors.*  
+![Backup Success Message](./images/backup_screenshot.jpg)
+
+**2. Restoration Process Success:**  
+*Confirmation that the system was able to reconstruct the database from the backup file.*  
+![Restore Success Message](./images/restore_screenshot.jpg)
 
 ## Phase 2: Integration
-
-
