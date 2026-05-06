@@ -58,6 +58,7 @@ WHERE g.groupid IS NULL;
 **תמונה דרך א':**
 ![דרך א](../images/SELECT2.jpeg)
 
+
 <b>דרך ב' (NOT IN):</b>
 
 ```sql
@@ -65,6 +66,8 @@ SELECT guideid, guidename
 FROM guide
 WHERE guideid NOT IN (SELECT guideid FROM "GROUP");
 ```
+![דרך א](../images/SELECT22.jpeg)
+
 
 > **השוואת יעילות:** דרך א' (LEFT JOIN) יציבה ויעילה יותר ברוב מנועי ה-SQL. שימוש ב-NOT IN נחשב למסוכן כי אם תת-השאילתה תחזיר ערך NULL אחד, כל השאילתה החיצונית לא תחזיר תוצאות כלל.
 
@@ -102,6 +105,7 @@ WHERE guideid IN (
     WHERE EXTRACT(YEAR FROM createddate) = 2025
 );
 ```
+![דרך א](../images/SELECT33.jpeg)
 
 > **השוואת יעילות:** EXISTS יעיל יותר מ-IN מכיוון שהוא מבוסס על יציאה מוקדמת – הוא מפסיק את הסריקה ברגע שהוא מוצא את ההתאמה הראשונה, במקום לבנות ולסרוק רשימה מלאה של כל הערכים.
 
@@ -135,6 +139,7 @@ FROM guide gu
 WHERE (SELECT COUNT(*) FROM trip t WHERE t.guideid = gu.guideid) > 1
 ORDER BY gu.guidename;
 ```
+![דרך א](../images/SELECT44.jpeg)
 
 > **השוואת יעילות:** דרך א' (GROUP BY) יעילה משמעותית. דרך ב' משתמשת בתת-שאילתה מקושרת שרצה מחדש עבור כל שורה בטבלת המדריכים, מה שיוצר עומס חישובי כבד מאד ככל שהטבלאות גדלות.
 
