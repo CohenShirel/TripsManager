@@ -35,7 +35,7 @@ JOIN location l ON e.locationid = l.locationid;
 ```
 
 **תמונה דרך ב':**
-![דרך ב](./images/SELECT1.JPEG)
+![דרך ב](../images/SELECT1.jpeg)
 
 > **השוואת יעילות:** דרך ב' (JOIN) יעילה יותר. המנוע מבצע את חישוב הקיבוץ פעם אחת בלבד ומחבר את התוצאה, בעוד ששימוש ב-IN עלול להריץ את הבדיקה באופן חוזר או פחות אופטימלי עבור קבוצות נתונים גדולות.
 
@@ -56,7 +56,7 @@ WHERE g.groupid IS NULL;
 ```
 
 **תמונה דרך א':**
-![דרך א](./images/SELECT2.JPEG)
+![דרך א](../images/SELECT2.jpeg)
 
 <b>דרך ב' (NOT IN):</b>
 
@@ -89,7 +89,7 @@ WHERE EXISTS (
 ```
 
 **תמונות דרך א':**
-![דרך א](./images/SELECT3.JPEG)
+![דרך א](../images/SELECT3.jpeg)
 
 <b>דרך ב' (IN):</b>
 
@@ -124,7 +124,7 @@ ORDER BY trip_count DESC;
 ```
 
 **תמונה דרך א':**
-![דרך א](./images/SELECT4.JPEG)
+![דרך א](../images/SELECT4.jpeg)
 
 
 <b>דרך ב' (Correlated Subquery):</b>
@@ -158,7 +158,7 @@ ORDER BY reg_year DESC, reg_month DESC;
 ```
 
 **הרצה ותוצאה:**
-![הרצה ותוצאה ששאילתה 5](./images/SELECT5.JPEG)
+![הרצה ותוצאה ששאילתה 5](../images/SELECT5.jpeg)
 
 ### 6. קטלוג טיולים מלא (חיבור 4 טבלאות)
 **תיאור:** תצוגה מרכזית המחברת נתוני טיולים, קבוצות, מדריכים ומיקומים.
@@ -180,7 +180,7 @@ LIMIT 20;
 ```
 
 **הרצה ותוצאה:**
-![הרצה ותוצאה ששאילתה 6](./images/SELECT6.JPEG)
+![הרצה ותוצאה ששאילתה 6](../images/SELECT6.jpeg)
 
 ### 7. משתתפים בוגרים (30+) באזור הצפון
 **תיאור:** פילוח משתתפים לפי גיל ואזור גיאוגרפי.
@@ -196,7 +196,7 @@ ORDER BY p.age ASC;
 ```
 
 **הרצה ותוצאה:**
-![הרצה ותוצאה ששאילתה 7](./images/SELECT7.JPEG)
+![הרצה ותוצאה ששאילתה 7](../images/SELECT7.jpeg)
 
 ### 8. אירועי בוקר (פירוק זמנים)
 **תיאור:** שליפת אירועים המתקיימים בין השעות 06:00 ל-12:00 בבוקר.
@@ -214,7 +214,7 @@ ORDER BY eventdate ASC;
 ```
 
 **הרצה ותוצאה:**
-![הרצה ותוצאה ששאילתה 8](./images/SELECT8.JPEG)
+![הרצה ותוצאה ששאילתה 8](../images/SELECT8.jpeg)
 
 ---
 
@@ -239,9 +239,9 @@ WHERE groupid IN (
 );
 ```
 
-* ![DB לפני מחיקה 1](./images/BDelete1.jpg)
-* ![פעולת עדכון 3](./images/Delete1.jpg)
-* ![הרצה ו-DB אחרי מחיקה 1](./images/ADelete1.jpg)
+* ![DB לפני מחיקה 1](../images/BDelete1.jpg)
+* ![פעולת עדכון 3](../images/Delete1.jpg)
+* ![הרצה ו-DB אחרי מחיקה 1](../images/ADelete1.jpg)
 
 **2. הסרת הרשמות לאירועים בטיולים ללא משתתפים בפועל**
 
@@ -264,9 +264,9 @@ WHERE eventid IN (
 ```
 
 
-* ![DB לפני מחיקה 2](./images/BDelete2.jpg)
-* ![פעולת עדכון 3](./images/Delete2.jpg)
-* ![הרצה ו-DB אחרי מחיקה 2](./images/ADelete2.jpg)
+* ![DB לפני מחיקה 2](../images/BDelete2.jpg)
+* ![פעולת עדכון 3](../images/Delete2.jpg)
+* ![הרצה ו-DB אחרי מחיקה 2](../images/ADelete2.jpg)
 
 **3. מחיקת מדריכים מתחילים באזורים צפופים (כולל העברת היסטוריה)**
 
@@ -313,9 +313,9 @@ AND NOT EXISTS (
 );
 ```
 
-* ![DB לפני מחיקה 3](./images/BDelete3.jpg)
-* ![פעולת עדכון 3](./images/Delete3.jpg)
-* ![הרצה ו-DB אחרי מחיקה 3](./images/ADelete3.jpg)
+* ![DB לפני מחיקה 3](../images/BDelete3.jpg)
+* ![פעולת עדכון 3](../images/Delete3.jpg)
+* ![הרצה ו-DB אחרי מחיקה 3](../images/ADelete3.jpg)
 
 ---
 
@@ -339,9 +339,9 @@ WHERE tripid IN (
 );
 ```
 
-* ![DB לפני עדכון 1](./images/BUpdate1.jpg)
-* ![פעולת עדכון 3](./images/Update1.jpg)
-* ![הרצה ו-DB אחרי עדכון 1](./images/AUpdate1.jpg)
+* ![DB לפני עדכון 1](../images/BUpdate1.jpg)
+* ![פעולת עדכון 3](../images/Update1.jpg)
+* ![הרצה ו-DB אחרי עדכון 1](../images/AUpdate1.jpg)
 
 **2. קידום מדריכים מנוסים ל-"Senior Guide"**
 
@@ -361,9 +361,9 @@ WHERE guideid IN (
 );
 ```
 
-* ![DB לפני עדכון 2](./images/BUpdate2.jpg)
-* ![פעולת עדכון 3](./images/Update2.jpg)
-* ![הרצה ו-DB אחרי עדכון 2](./images/AUpdate2.jpg)
+* ![DB לפני עדכון 2](../images/BUpdate2.jpg)
+* ![פעולת עדכון 3](../images/Update2.jpg)
+* ![הרצה ו-DB אחרי עדכון 2](../images/AUpdate2.jpg)
 
 **3. סימון אירועים עתידיים בצפון כ-"Premium"**
 
@@ -382,9 +382,9 @@ WHERE EXISTS (
 );
 ```
 
-* ![DB לפני עדכון 3](./images/BUpdate3.jpg)
-* ![פעולת עדכון 3](./images/Update3.jpg)
-* ![הרצה ו-DB אחרי עדכון 3](./images/AUpdate3.jpg)
+* ![DB לפני עדכון 3](../images/BUpdate3.jpg)
+* ![פעולת עדכון 3](../images/Update3.jpg)
+* ![הרצה ו-DB אחרי עדכון 3](../images/AUpdate3.jpg)
 
 ---
 
@@ -402,7 +402,7 @@ ADD CONSTRAINT chk_participant_age_min CHECK (age >= 5);
 INSERT INTO public.participant (firstname, lastname, age) 
 VALUES ('TEST', 'TEST', 2);
 ```
-* **שגיאת הרצה:** ![שגיאת אילוץ 1](./images/Constraints2.jpeg)
+* **שגיאת הרצה:** ![שגיאת אילוץ 1](../images/Constraints2.jpeg)
 
 **2. אילוץ UNIQUE: כתובת אימייל ייחודית למדריך**
 * **תיאור:** מטרת האילוץ היא למנוע כפילויות של מדריכים במערכת.
@@ -416,7 +416,7 @@ ADD CONSTRAINT uni_guide_email UNIQUE (email);
 INSERT INTO public.guide (guidename, email, specialization) 
 VALUES ('TEST', 'guide1@example.com', 'TEST');
 ```
-* **שגיאת הרצה:** ![שגיאת אילוץ 2](./images/Constraints3.jpeg)
+* **שגיאת הרצה:** ![שגיאת אילוץ 2](../images/Constraints3.jpeg)
 
 **3. אילוץ NOT NULL: חובת הזנת שם מיקום**
 * **תיאור:** מטרת האילוץ לוודא שאין מיקומים חסרי שם במערכת.
@@ -430,7 +430,7 @@ ALTER COLUMN locationname SET NOT NULL;
 INSERT INTO public.location (locationname, region, address) 
 VALUES (NULL, 'TEST', 'TEST');
 ```
-* **שגיאת הרצה:** ![שגיאת אילוץ 3](./images/Constraints4.jpeg)
+* **שגיאת הרצה:** ![שגיאת אילוץ 3](../images/Constraints4.jpeg)
 
 ---
 
@@ -443,8 +443,8 @@ VALUES (NULL, 'TEST', 'TEST');
 CREATE INDEX idx_participant_age ON public.participant(age);
 ```
 
-* **זמני ריצה:** * לפני אינדקס: ![זמן לפני 1](./images/INDEX1.jpeg)
-  * אחרי אינדקס: ![זמן אחרי 1](./images/INDEX2.jpeg)
+* **זמני ריצה:** * לפני אינדקס: ![זמן לפני 1](../images/INDEX1.jpeg)
+  * אחרי אינדקס: ![זמן אחרי 1](../images/INDEX2.jpeg)
 
 >> **הסבר התוצאות:** זמן הריצה ירד מ-**1.735ms** ל-**1.326ms**. השיפור (אפילו בטבלה קטנה) מראה שהמנוע עבר מחיפוש איטי שסורק את כל הטבלה (Full Table Scan) לגישה מהירה וישירה לנתונים (Index Scan).
 
@@ -454,8 +454,8 @@ CREATE INDEX idx_participant_age ON public.participant(age);
 ```sql
 CREATE INDEX idx_event_date ON public.event(eventdate);
 ```
-* **זמני ריצה:** * לפני אינדקס: ![זמן לפני 2](./images/INDEX11.jpeg)
-  * אחרי אינדקס: ![זמן אחרי 2](./images/INDEX22.jpeg)
+* **זמני ריצה:** * לפני אינדקס: ![זמן לפני 2](../images/INDEX11.jpeg)
+  * אחרי אינדקס: ![זמן אחרי 2](../images/INDEX22.jpeg)
 
 > **הסבר התוצאות:** נרשם שיפור דרמטי מאוד! זמן הריצה צנח מ-**3.174ms** ל-**0.111ms**. זה מעיד על כך שחיפוש וסינון אירועים לפי תאריך מבוצעים כעת ביעילות מקסימלית ובשבריר מהזמן המקורי.
 
@@ -465,8 +465,8 @@ CREATE INDEX idx_event_date ON public.event(eventdate);
 ```sql
 CREATE INDEX idx_event_locationid ON public.event(locationid);
 ```
-* **זמני ריצה:** * לפני אינדקס: ![זמן לפני 3](./images/INDEX111.jpeg)
-  * אחרי אינדקס: ![זמן אחרי 3](./images/INDEX222.jpeg)
+* **זמני ריצה:** * לפני אינדקס: ![זמן לפני 3](../images/INDEX111.jpeg)
+  * אחרי אינדקס: ![זמן אחרי 3](../images/INDEX222.jpeg)
 
 
 > **הסבר התוצאות:** גם כאן נרשם שיפור עצום – זמן הריצה ירד מ-**5.254ms** ל-**0.415ms** (יותר מפי 10 מהר יותר). הדבר מוכיח שהאינדקס מייעל בצורה משמעותית את עומס החישוב בעת ביצוע פעולות JOIN בין הטבלאות.
@@ -492,9 +492,9 @@ ROLLBACK;
 SELECT * FROM public.guide WHERE guideid = 1;
 ```
 
-* פעולת העדכון בתוך הטרנזקציה (הודעת הצלחה): ![הרצת העדכון](./images/ROLBACK1.jpeg)
-* מצב לפני ה-Rollback (בתוך הטרנזקציה): ![לפני Rollback](./images/ROLBACK2.jpeg)
-* מצב אחרי ה-Rollback (החזרה לאחור): ![אחרי Rollback](./images/ROLBACK3.jpeg)
+* פעולת העדכון בתוך הטרנזקציה (הודעת הצלחה): ![הרצת העדכון](../images/ROLBACK1.jpeg)
+* מצב לפני ה-Rollback (בתוך הטרנזקציה): ![לפני Rollback](../images/ROLLBACK2.jpeg)
+* מצב אחרי ה-Rollback (החזרה לאחור): ![אחרי Rollback](../images/ROLLBACK3.jpeg)
 
 
 **תרחיש 2: בדיקת Commit**
@@ -514,5 +514,5 @@ COMMIT;
 SELECT guideid, guidename, specialization FROM public.guide WHERE guideid = 2;
 ```
 
-* מצב בתוך הטרנזקציה (לפני Commit): ![לפני Commit](./images/COMMIT1.jpeg)
-* מצב אחרי ה-Commit (השמירה): ![אחרי Commit](./images/COMMIT2.jpeg)
+* מצב בתוך הטרנזקציה (לפני Commit): ![לפני Commit](../images/COMMIT1.jpeg)
+* מצב אחרי ה-Commit (השמירה): ![אחרי Commit](../images/COMMIT2.jpeg)
