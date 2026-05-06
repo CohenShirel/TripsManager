@@ -110,4 +110,11 @@ We verified the backup by performing a full restore into a clean environment:
 *Confirmation that the system was able to reconstruct the database from the backup file.*  
 ![Restore Success Message](./images/restore_screenshot.jpg)
 
-## Phase 2: Integration
+## Phase 2: Querying, Optimization, and Data Control
+
+In this phase of the project, we focused on advanced, hands-on operations with our database. We executed complex `SELECT` queries, which included performance analysis and comparing the efficiency of different query structures. We also performed conditional `UPDATE` and `DELETE` operations while strictly maintaining Referential Integrity.
+
+Additionally, we enhanced the system's reliability by implementing Constraints to prevent invalid data entry. We significantly improved query execution times by creating Indexes, and demonstrated safe data manipulation using transaction control (`Rollback` & `Commit`). 
+All SQL files for this phase, along with the updated backup file (`backup2`), are located in the `Phase2` folder.
+
+📄 **[To view the full Phase B Project Report (including execution screenshots, efficiency analysis, and performance proofs) - Click Here](./Phase2/Project_Report.md)**

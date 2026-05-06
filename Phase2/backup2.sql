@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict RRtlu0mlQG4fXR3I77EpXUNRyNLdE7ltKIqjLjrxmfWBFMYoUjjX0VQ8J4YciTE
+\restrict cepydLpERmB9ngT6zt1IeXI70ku6GEHbIRBk6x5wlDTbRN5SbtokpcCzmr5pYW2
 
 -- Dumped from database version 18.3 (Debian 18.3-1.pgdg13+1)
 -- Dumped by pg_dump version 18.3
 
--- Started on 2026-05-04 11:16:20 UTC
+-- Started on 2026-05-05 02:04:42 UTC
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -415,7 +415,6 @@ COPY public."GROUP" (groupid, groupname, description, createddate, guideid) FROM
 4	Group_4	Fun group	2025-02-20	252
 5	Group_5	Fun group	2025-01-22	146
 6	Group_6	Fun group	2025-04-18	240
-7	Group_7	Fun group	2025-06-03	119
 8	Group_8	Fun group	2025-10-06	342
 9	Group_9	Fun group	2025-07-18	417
 10	Group_10	Fun group	2025-06-29	89
@@ -443,7 +442,6 @@ COPY public."GROUP" (groupid, groupname, description, createddate, guideid) FROM
 32	Group_32	Fun group	2025-06-04	297
 33	Group_33	Fun group	2025-06-01	242
 34	Group_34	Fun group	2025-04-13	53
-35	Group_35	Fun group	2025-09-26	119
 36	Group_36	Fun group	2025-06-29	467
 37	Group_37	Fun group	2025-04-18	72
 38	Group_38	Fun group	2025-06-24	452
@@ -909,6 +907,8 @@ COPY public."GROUP" (groupid, groupname, description, createddate, guideid) FROM
 498	Group_498	Fun group	2025-04-26	477
 499	Group_499	Fun group	2025-09-12	306
 500	Group_500	Fun group	2025-06-23	152
+7	Group_7	Fun group	2025-06-03	1
+35	Group_35	Fun group	2025-09-26	1
 \.
 
 
@@ -920,7 +920,6 @@ COPY public."GROUP" (groupid, groupname, description, createddate, guideid) FROM
 
 COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid) FROM stdin;
 1	Event_1	2026-11-16	10:00:00	79	467
-2	Event_2	2026-08-26	16:00:00	111	159
 3	Event_3	2026-12-22	11:00:00	155	297
 4	Event_4	2026-10-24	12:00:00	141	127
 5	Event_5	2026-04-24	09:00:00	282	104
@@ -931,19 +930,14 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 10	Event_10	2026-07-21	20:00:00	70	145
 11	Event_11	2026-09-23	09:00:00	319	89
 12	Event_12	2026-03-28	14:00:00	82	29
-13	Event_13	2026-11-30	17:00:00	129	407
 14	Event_14	2026-04-26	12:00:00	38	172
-15	Event_15	2026-02-20	16:00:00	197	263
 16	Event_16	2026-10-08	10:00:00	124	372
 17	Event_17	2026-02-27	11:00:00	56	170
 18	Event_18	2026-10-16	10:00:00	447	111
 19	Event_19	2026-07-31	13:00:00	205	126
-20	Event_20	2026-08-09	13:00:00	48	169
-21	Event_21	2026-06-13	17:00:00	153	53
 22	Event_22	2026-06-14	13:00:00	190	323
 23	Event_23	2026-09-26	09:00:00	62	39
 24	Event_24	2026-05-18	16:00:00	22	395
-25	Event_25	2026-03-30	17:00:00	423	186
 26	Event_26	2026-03-13	20:00:00	229	133
 27	Event_27	2026-11-23	13:00:00	487	305
 28	Event_28	2026-03-11	15:00:00	75	219
@@ -971,10 +965,8 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 50	Event_50	2026-04-11	20:00:00	373	202
 51	Event_51	2026-07-30	10:00:00	162	184
 52	Event_52	2026-04-27	13:00:00	60	219
-53	Event_53	2026-05-12	10:00:00	153	315
 54	Event_54	2026-06-25	13:00:00	6	249
 55	Event_55	2026-05-12	17:00:00	95	478
-56	Event_56	2026-11-06	20:00:00	199	231
 57	Event_57	2026-10-04	20:00:00	277	400
 58	Event_58	2026-11-24	12:00:00	84	308
 59	Event_59	2026-03-28	15:00:00	203	390
@@ -993,10 +985,8 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 72	Event_72	2026-05-27	12:00:00	356	336
 73	Event_73	2026-01-27	19:00:00	220	320
 74	Event_74	2026-04-11	14:00:00	343	146
-75	Event_75	2026-09-30	17:00:00	392	447
 76	Event_76	2026-03-20	10:00:00	116	341
 77	Event_77	2026-02-14	19:00:00	178	281
-78	Event_78	2026-09-10	19:00:00	327	294
 79	Event_79	2026-12-19	19:00:00	89	229
 80	Event_80	2026-08-15	20:00:00	246	105
 81	Event_81	2026-11-19	13:00:00	387	336
@@ -1007,17 +997,14 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 86	Event_86	2026-12-12	18:00:00	1	363
 87	Event_87	2026-03-08	08:00:00	71	112
 88	Event_88	2026-02-26	15:00:00	328	177
-89	Event_89	2026-10-26	19:00:00	468	56
 90	Event_90	2026-01-17	18:00:00	198	345
 91	Event_91	2026-07-18	13:00:00	8	119
 92	Event_92	2026-11-22	20:00:00	385	335
 93	Event_93	2026-05-01	09:00:00	205	235
 94	Event_94	2026-11-20	20:00:00	249	201
 95	Event_95	2026-01-01	08:00:00	349	89
-96	Event_96	2026-12-31	15:00:00	396	330
 97	Event_97	2026-12-24	12:00:00	37	414
 98	Event_98	2026-12-20	14:00:00	29	328
-99	Event_99	2026-04-01	15:00:00	301	419
 100	Event_100	2026-01-17	16:00:00	236	480
 101	Event_101	2026-09-18	19:00:00	31	1
 102	Event_102	2026-08-14	13:00:00	86	63
@@ -1030,7 +1017,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 109	Event_109	2026-10-03	19:00:00	103	203
 110	Event_110	2026-08-01	13:00:00	33	367
 111	Event_111	2026-08-16	14:00:00	421	244
-112	Event_112	2026-07-12	20:00:00	55	316
 113	Event_113	2026-01-13	18:00:00	283	162
 114	Event_114	2026-06-08	12:00:00	173	468
 115	Event_115	2026-08-29	08:00:00	88	400
@@ -1043,7 +1029,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 122	Event_122	2026-10-26	10:00:00	251	406
 123	Event_123	2026-11-12	13:00:00	484	199
 124	Event_124	2026-04-17	20:00:00	138	238
-125	Event_125	2026-03-10	17:00:00	474	369
 126	Event_126	2026-08-28	20:00:00	255	410
 127	Event_127	2026-03-09	11:00:00	307	19
 128	Event_128	2026-08-25	17:00:00	437	305
@@ -1053,7 +1038,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 132	Event_132	2026-02-20	15:00:00	394	67
 133	Event_133	2026-05-18	08:00:00	285	287
 134	Event_134	2026-04-24	17:00:00	292	425
-135	Event_135	2026-06-02	15:00:00	202	339
 136	Event_136	2026-08-21	20:00:00	33	334
 137	Event_137	2026-04-02	13:00:00	479	491
 138	Event_138	2026-07-29	19:00:00	9	494
@@ -1061,7 +1045,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 140	Event_140	2026-04-21	12:00:00	65	214
 141	Event_141	2026-11-02	15:00:00	341	255
 142	Event_142	2026-07-14	19:00:00	155	92
-143	Event_143	2026-07-27	12:00:00	492	112
 144	Event_144	2026-03-28	17:00:00	297	198
 145	Event_145	2026-11-20	18:00:00	457	11
 146	Event_146	2026-08-29	17:00:00	483	327
@@ -1072,16 +1055,13 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 151	Event_151	2026-02-20	18:00:00	353	314
 152	Event_152	2026-04-06	17:00:00	2	46
 153	Event_153	2026-08-18	11:00:00	182	307
-154	Event_154	2026-07-19	13:00:00	142	382
 155	Event_155	2026-10-14	11:00:00	4	376
 156	Event_156	2026-04-28	13:00:00	147	432
 157	Event_157	2026-04-25	08:00:00	17	182
-158	Event_158	2026-08-02	18:00:00	468	122
 159	Event_159	2026-01-28	14:00:00	302	109
 160	Event_160	2026-09-01	17:00:00	271	485
 161	Event_161	2026-03-18	20:00:00	331	121
 162	Event_162	2026-10-28	19:00:00	116	70
-163	Event_163	2026-09-28	19:00:00	423	254
 164	Event_164	2026-12-13	18:00:00	487	72
 165	Event_165	2026-05-06	13:00:00	77	211
 166	Event_166	2026-06-20	12:00:00	378	90
@@ -1089,7 +1069,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 168	Event_168	2026-03-24	10:00:00	295	30
 169	Event_169	2026-04-13	17:00:00	34	439
 170	Event_170	2026-11-21	19:00:00	90	466
-171	Event_171	2026-04-30	18:00:00	460	373
 172	Event_172	2026-09-21	13:00:00	65	195
 173	Event_173	2026-05-25	19:00:00	254	52
 174	Event_174	2026-01-19	13:00:00	11	259
@@ -1099,27 +1078,21 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 178	Event_178	2026-04-08	08:00:00	215	438
 179	Event_179	2026-05-08	10:00:00	364	35
 180	Event_180	2026-08-25	20:00:00	126	371
-181	Event_181	2026-06-09	14:00:00	382	135
 182	Event_182	2026-03-01	12:00:00	395	23
 183	Event_183	2026-05-02	14:00:00	495	94
 184	Event_184	2026-06-20	11:00:00	324	279
-185	Event_185	2026-12-12	19:00:00	443	61
 186	Event_186	2026-08-10	18:00:00	101	70
 187	Event_187	2026-03-18	16:00:00	353	64
 188	Event_188	2026-01-24	17:00:00	431	201
 189	Event_189	2026-03-20	15:00:00	213	51
 190	Event_190	2026-04-25	16:00:00	476	226
-191	Event_191	2026-09-19	19:00:00	327	50
-192	Event_192	2026-10-03	18:00:00	350	15
 193	Event_193	2026-08-10	15:00:00	47	39
 194	Event_194	2026-02-05	12:00:00	24	40
-195	Event_195	2026-01-13	20:00:00	425	402
 196	Event_196	2026-08-14	15:00:00	381	301
 197	Event_197	2026-07-06	19:00:00	116	378
 198	Event_198	2026-09-04	08:00:00	251	4
 199	Event_199	2026-09-26	20:00:00	198	48
 200	Event_200	2026-11-13	08:00:00	466	184
-201	Event_201	2026-04-19	18:00:00	430	396
 202	Event_202	2026-09-06	11:00:00	51	276
 203	Event_203	2026-07-02	18:00:00	138	303
 204	Event_204	2026-12-07	18:00:00	406	156
@@ -1135,7 +1108,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 214	Event_214	2026-11-01	09:00:00	73	199
 215	Event_215	2026-05-30	15:00:00	488	59
 216	Event_216	2026-01-01	11:00:00	312	1
-217	Event_217	2026-01-29	20:00:00	32	28
 218	Event_218	2026-11-08	10:00:00	173	49
 219	Event_219	2026-08-09	12:00:00	159	252
 220	Event_220	2026-11-04	08:00:00	415	287
@@ -1144,10 +1116,8 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 223	Event_223	2026-04-22	18:00:00	346	295
 224	Event_224	2026-01-09	19:00:00	154	131
 225	Event_225	2026-12-15	15:00:00	40	364
-226	Event_226	2026-03-09	10:00:00	224	40
 227	Event_227	2026-02-09	14:00:00	316	195
 228	Event_228	2026-04-03	08:00:00	136	432
-229	Event_229	2026-09-26	12:00:00	30	435
 230	Event_230	2026-07-07	13:00:00	192	256
 231	Event_231	2026-03-22	19:00:00	183	480
 232	Event_232	2026-01-19	10:00:00	16	41
@@ -1174,16 +1144,13 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 253	Event_253	2026-08-06	12:00:00	109	200
 254	Event_254	2026-06-07	17:00:00	108	243
 255	Event_255	2026-06-16	11:00:00	260	180
-256	Event_256	2026-01-05	15:00:00	23	341
 257	Event_257	2026-06-02	16:00:00	409	324
 258	Event_258	2026-07-21	18:00:00	105	224
-259	Event_259	2026-08-02	13:00:00	92	228
 260	Event_260	2026-08-23	12:00:00	316	494
 261	Event_261	2026-06-03	16:00:00	168	167
 262	Event_262	2026-06-18	20:00:00	426	57
 263	Event_263	2026-11-18	14:00:00	106	297
 264	Event_264	2026-02-05	11:00:00	288	101
-265	Event_265	2026-10-06	16:00:00	36	44
 266	Event_266	2026-11-27	11:00:00	82	165
 267	Event_267	2026-02-09	13:00:00	14	444
 268	Event_268	2026-07-03	15:00:00	419	48
@@ -1198,7 +1165,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 277	Event_277	2026-08-22	09:00:00	74	77
 278	Event_278	2026-12-16	16:00:00	229	425
 279	Event_279	2026-11-11	19:00:00	270	13
-280	Event_280	2026-09-27	16:00:00	481	291
 281	Event_281	2026-04-29	12:00:00	450	198
 282	Event_282	2026-06-27	19:00:00	401	130
 283	Event_283	2026-10-08	14:00:00	88	257
@@ -1208,7 +1174,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 287	Event_287	2026-09-10	16:00:00	270	133
 288	Event_288	2026-08-21	09:00:00	267	323
 289	Event_289	2026-01-16	18:00:00	169	381
-290	Event_290	2026-07-22	17:00:00	93	24
 291	Event_291	2026-10-17	14:00:00	450	269
 292	Event_292	2026-05-10	11:00:00	145	469
 293	Event_293	2026-04-12	10:00:00	176	318
@@ -1217,15 +1182,11 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 296	Event_296	2026-11-27	20:00:00	157	162
 297	Event_297	2026-01-06	18:00:00	460	460
 298	Event_298	2026-02-18	18:00:00	217	165
-299	Event_299	2026-12-04	14:00:00	235	377
-300	Event_300	2026-11-21	20:00:00	31	143
 301	Event_301	2026-11-13	18:00:00	110	134
 302	Event_302	2026-02-05	20:00:00	338	372
 303	Event_303	2026-03-13	08:00:00	120	9
-304	Event_304	2026-10-08	14:00:00	244	132
 305	Event_305	2026-10-26	08:00:00	381	460
 306	Event_306	2026-01-26	08:00:00	99	50
-307	Event_307	2026-12-27	08:00:00	382	2
 308	Event_308	2026-04-05	10:00:00	226	101
 309	Event_309	2026-04-13	15:00:00	386	127
 310	Event_310	2026-03-16	16:00:00	367	276
@@ -1238,14 +1199,12 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 317	Event_317	2026-02-26	16:00:00	185	399
 318	Event_318	2026-07-20	09:00:00	468	102
 319	Event_319	2026-12-06	10:00:00	155	15
-320	Event_320	2026-01-12	19:00:00	308	72
 321	Event_321	2026-04-29	15:00:00	496	121
 322	Event_322	2026-01-17	10:00:00	324	308
 323	Event_323	2026-09-29	19:00:00	161	78
 324	Event_324	2026-10-20	15:00:00	189	325
 325	Event_325	2026-09-08	19:00:00	329	98
 326	Event_326	2026-11-26	16:00:00	466	165
-327	Event_327	2026-04-30	17:00:00	92	396
 328	Event_328	2026-09-29	08:00:00	20	482
 329	Event_329	2026-09-17	12:00:00	110	81
 330	Event_330	2026-01-18	20:00:00	469	419
@@ -1255,7 +1214,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 334	Event_334	2026-02-06	11:00:00	287	424
 335	Event_335	2026-01-07	12:00:00	118	205
 336	Event_336	2026-09-29	11:00:00	333	88
-337	Event_337	2026-05-12	10:00:00	78	402
 338	Event_338	2026-11-02	15:00:00	299	227
 339	Event_339	2026-12-19	14:00:00	278	325
 340	Event_340	2026-08-07	08:00:00	462	303
@@ -1263,16 +1221,13 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 342	Event_342	2026-07-22	08:00:00	471	1
 343	Event_343	2026-05-04	20:00:00	483	375
 344	Event_344	2026-04-23	13:00:00	436	26
-345	Event_345	2026-11-16	10:00:00	460	208
 346	Event_346	2026-12-06	10:00:00	90	264
 347	Event_347	2026-08-07	13:00:00	399	30
 348	Event_348	2026-06-07	13:00:00	26	151
-349	Event_349	2026-09-28	16:00:00	93	194
 350	Event_350	2026-03-08	13:00:00	400	34
 351	Event_351	2026-07-26	16:00:00	273	204
 352	Event_352	2026-08-14	11:00:00	162	496
 353	Event_353	2026-12-27	20:00:00	371	286
-354	Event_354	2026-05-10	11:00:00	221	95
 355	Event_355	2026-01-04	18:00:00	240	89
 356	Event_356	2026-02-27	11:00:00	406	122
 357	Event_357	2026-10-05	09:00:00	153	141
@@ -1289,26 +1244,19 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 368	Event_368	2026-07-06	14:00:00	443	324
 369	Event_369	2026-07-01	13:00:00	458	455
 370	Event_370	2026-03-09	11:00:00	323	149
-371	Event_371	2026-07-07	15:00:00	468	143
 372	Event_372	2026-05-10	10:00:00	49	198
 373	Event_373	2026-02-26	17:00:00	368	48
-374	Event_374	2026-01-18	16:00:00	146	486
 375	Event_375	2026-11-27	17:00:00	30	494
 376	Event_376	2026-09-17	15:00:00	283	408
 377	Event_377	2026-03-31	16:00:00	26	414
 378	Event_378	2026-07-31	09:00:00	367	333
-379	Event_379	2026-05-06	18:00:00	224	252
 380	Event_380	2026-11-05	18:00:00	496	199
 381	Event_381	2026-05-20	18:00:00	336	91
-382	Event_382	2026-05-06	14:00:00	468	241
 383	Event_383	2026-02-22	17:00:00	138	96
 384	Event_384	2026-04-27	12:00:00	272	41
-385	Event_385	2026-09-02	18:00:00	498	340
 386	Event_386	2026-03-22	09:00:00	297	473
-387	Event_387	2026-04-21	11:00:00	102	61
 388	Event_388	2026-07-01	17:00:00	296	82
 389	Event_389	2026-05-10	11:00:00	298	24
-390	Event_390	2026-01-11	18:00:00	135	176
 391	Event_391	2026-12-20	19:00:00	241	33
 392	Event_392	2026-06-22	20:00:00	444	192
 393	Event_393	2026-10-06	19:00:00	109	208
@@ -1334,7 +1282,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 413	Event_413	2026-02-01	17:00:00	386	257
 414	Event_414	2026-11-21	14:00:00	268	65
 415	Event_415	2026-05-01	10:00:00	132	43
-416	Event_416	2026-04-29	09:00:00	467	61
 417	Event_417	2026-07-30	17:00:00	167	214
 418	Event_418	2026-05-15	13:00:00	233	449
 419	Event_419	2026-01-31	17:00:00	329	136
@@ -1342,7 +1289,6 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 421	Event_421	2026-09-09	11:00:00	5	355
 422	Event_422	2026-08-17	17:00:00	248	165
 423	Event_423	2026-08-04	20:00:00	16	228
-424	Event_424	2026-01-28	19:00:00	6	378
 425	Event_425	2026-12-18	17:00:00	285	103
 426	Event_426	2026-07-29	08:00:00	400	485
 427	Event_427	2026-10-02	08:00:00	169	191
@@ -1383,30 +1329,24 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 462	Event_462	2026-09-11	09:00:00	75	421
 463	Event_463	2026-12-24	12:00:00	398	6
 464	Event_464	2026-04-15	20:00:00	95	216
-465	Event_465	2026-06-06	17:00:00	23	222
 466	Event_466	2026-08-25	17:00:00	341	19
 467	Event_467	2026-10-04	09:00:00	374	471
 468	Event_468	2026-09-03	19:00:00	70	337
 469	Event_469	2026-03-09	12:00:00	326	321
-470	Event_470	2026-05-25	12:00:00	208	294
 471	Event_471	2026-05-06	13:00:00	427	410
 472	Event_472	2026-04-03	18:00:00	189	482
 473	Event_473	2026-08-27	18:00:00	456	65
 474	Event_474	2026-05-26	20:00:00	16	382
 475	Event_475	2026-07-06	19:00:00	481	110
-476	Event_476	2026-04-10	12:00:00	228	417
 477	Event_477	2026-08-19	08:00:00	362	262
 478	Event_478	2026-02-21	12:00:00	406	325
-479	Event_479	2026-11-27	18:00:00	146	342
 480	Event_480	2026-01-05	17:00:00	190	234
 481	Event_481	2026-12-08	16:00:00	342	155
-482	Event_482	2026-11-17	18:00:00	333	171
 483	Event_483	2026-08-06	09:00:00	174	301
 484	Event_484	2026-03-08	08:00:00	378	432
 485	Event_485	2026-04-13	13:00:00	53	399
 486	Event_486	2026-07-20	10:00:00	152	444
 487	Event_487	2026-06-27	16:00:00	263	168
-488	Event_488	2026-08-18	14:00:00	257	337
 489	Event_489	2026-03-06	19:00:00	426	312
 490	Event_490	2026-02-14	15:00:00	457	355
 491	Event_491	2026-08-03	15:00:00	70	199
@@ -1416,9 +1356,69 @@ COPY public.event (eventid, eventname, eventdate, eventtime, tripid, locationid)
 495	Event_495	2026-07-12	15:00:00	155	423
 496	Event_496	2026-01-02	13:00:00	300	454
 497	Event_497	2026-10-26	12:00:00	401	480
-498	Event_498	2026-03-12	13:00:00	123	228
 499	Event_499	2026-12-30	20:00:00	185	137
 500	Event_500	2026-02-24	18:00:00	88	152
+2	Event_2 (Premium)	2026-08-26	16:00:00	111	159
+13	Event_13 (Premium)	2026-11-30	17:00:00	129	407
+15	Event_15 (Premium)	2026-02-20	16:00:00	197	263
+20	Event_20 (Premium)	2026-08-09	13:00:00	48	169
+21	Event_21 (Premium)	2026-06-13	17:00:00	153	53
+25	Event_25 (Premium)	2026-03-30	17:00:00	423	186
+53	Event_53 (Premium)	2026-05-12	10:00:00	153	315
+56	Event_56 (Premium)	2026-11-06	20:00:00	199	231
+75	Event_75 (Premium)	2026-09-30	17:00:00	392	447
+78	Event_78 (Premium)	2026-09-10	19:00:00	327	294
+89	Event_89 (Premium)	2026-10-26	19:00:00	468	56
+96	Event_96 (Premium)	2026-12-31	15:00:00	396	330
+99	Event_99 (Premium)	2026-04-01	15:00:00	301	419
+112	Event_112 (Premium)	2026-07-12	20:00:00	55	316
+125	Event_125 (Premium)	2026-03-10	17:00:00	474	369
+135	Event_135 (Premium)	2026-06-02	15:00:00	202	339
+143	Event_143 (Premium)	2026-07-27	12:00:00	492	112
+154	Event_154 (Premium)	2026-07-19	13:00:00	142	382
+158	Event_158 (Premium)	2026-08-02	18:00:00	468	122
+163	Event_163 (Premium)	2026-09-28	19:00:00	423	254
+171	Event_171 (Premium)	2026-04-30	18:00:00	460	373
+181	Event_181 (Premium)	2026-06-09	14:00:00	382	135
+185	Event_185 (Premium)	2026-12-12	19:00:00	443	61
+191	Event_191 (Premium)	2026-09-19	19:00:00	327	50
+192	Event_192 (Premium)	2026-10-03	18:00:00	350	15
+195	Event_195 (Premium)	2026-01-13	20:00:00	425	402
+201	Event_201 (Premium)	2026-04-19	18:00:00	430	396
+217	Event_217 (Premium)	2026-01-29	20:00:00	32	28
+226	Event_226 (Premium)	2026-03-09	10:00:00	224	40
+229	Event_229 (Premium)	2026-09-26	12:00:00	30	435
+256	Event_256 (Premium)	2026-01-05	15:00:00	23	341
+259	Event_259 (Premium)	2026-08-02	13:00:00	92	228
+265	Event_265 (Premium)	2026-10-06	16:00:00	36	44
+280	Event_280 (Premium)	2026-09-27	16:00:00	481	291
+290	Event_290 (Premium)	2026-07-22	17:00:00	93	24
+299	Event_299 (Premium)	2026-12-04	14:00:00	235	377
+300	Event_300 (Premium)	2026-11-21	20:00:00	31	143
+304	Event_304 (Premium)	2026-10-08	14:00:00	244	132
+307	Event_307 (Premium)	2026-12-27	08:00:00	382	2
+320	Event_320 (Premium)	2026-01-12	19:00:00	308	72
+327	Event_327 (Premium)	2026-04-30	17:00:00	92	396
+337	Event_337 (Premium)	2026-05-12	10:00:00	78	402
+345	Event_345 (Premium)	2026-11-16	10:00:00	460	208
+349	Event_349 (Premium)	2026-09-28	16:00:00	93	194
+354	Event_354 (Premium)	2026-05-10	11:00:00	221	95
+371	Event_371 (Premium)	2026-07-07	15:00:00	468	143
+374	Event_374 (Premium)	2026-01-18	16:00:00	146	486
+379	Event_379 (Premium)	2026-05-06	18:00:00	224	252
+382	Event_382 (Premium)	2026-05-06	14:00:00	468	241
+385	Event_385 (Premium)	2026-09-02	18:00:00	498	340
+387	Event_387 (Premium)	2026-04-21	11:00:00	102	61
+390	Event_390 (Premium)	2026-01-11	18:00:00	135	176
+416	Event_416 (Premium)	2026-04-29	09:00:00	467	61
+424	Event_424 (Premium)	2026-01-28	19:00:00	6	378
+465	Event_465 (Premium)	2026-06-06	17:00:00	23	222
+470	Event_470 (Premium)	2026-05-25	12:00:00	208	294
+476	Event_476 (Premium)	2026-04-10	12:00:00	228	417
+479	Event_479 (Premium)	2026-11-27	18:00:00	146	342
+482	Event_482 (Premium)	2026-11-17	18:00:00	333	171
+488	Event_488 (Premium)	2026-08-18	14:00:00	257	337
+498	Event_498 (Premium)	2026-03-12	13:00:00	123	228
 \.
 
 
@@ -1674,7 +1674,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 243	2026-09-21	416
 244	2026-07-31	496
 245	2026-02-19	435
-246	2026-12-23	263
 247	2026-05-09	52
 248	2026-10-31	129
 249	2026-09-09	491
@@ -2056,7 +2055,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 625	2026-04-30	195
 626	2026-07-09	285
 627	2026-04-18	441
-628	2026-01-22	263
 629	2026-06-03	21
 630	2026-11-25	202
 631	2026-12-02	243
@@ -2768,7 +2766,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 1337	2026-03-14	5
 1338	2026-06-22	231
 1339	2026-12-13	74
-1340	2026-08-20	263
 1341	2026-04-08	434
 1342	2026-09-19	373
 1343	2026-09-08	456
@@ -3531,7 +3528,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 2100	2026-02-05	186
 2101	2026-02-21	241
 2102	2026-03-11	107
-2103	2026-02-12	263
 2104	2026-05-26	23
 2105	2026-03-29	12
 2106	2026-12-19	435
@@ -3942,7 +3938,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 2511	2026-08-09	224
 2512	2026-04-05	282
 2513	2026-10-21	405
-2514	2026-03-07	263
 2515	2026-05-04	406
 2516	2026-09-21	460
 2517	2026-11-23	156
@@ -4048,7 +4043,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 2617	2026-09-15	368
 2618	2026-02-16	303
 2619	2026-04-10	273
-2620	2026-01-18	263
 2621	2026-06-27	427
 2622	2026-07-17	208
 2623	2026-09-05	138
@@ -4719,7 +4713,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 3288	2026-09-29	324
 3289	2026-09-24	428
 3290	2026-01-31	71
-3291	2026-04-11	263
 3292	2026-10-14	110
 3293	2026-11-15	40
 3294	2026-12-17	256
@@ -6401,7 +6394,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 4970	2026-01-29	207
 4971	2026-01-02	315
 4972	2026-11-24	9
-4973	2026-07-01	263
 4974	2026-11-08	96
 4975	2026-08-30	331
 4976	2026-11-08	331
@@ -6739,7 +6731,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 5308	2026-06-09	59
 5309	2026-09-16	78
 5310	2026-01-29	249
-5311	2026-08-16	263
 5312	2026-12-21	124
 5313	2026-08-18	169
 5314	2026-09-14	433
@@ -7442,7 +7433,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 6011	2026-04-23	316
 6012	2026-02-21	206
 6013	2026-07-14	376
-6014	2026-09-15	263
 6015	2026-10-13	189
 6016	2026-12-14	32
 6017	2026-12-23	349
@@ -8078,7 +8068,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 6647	2026-03-21	409
 6648	2026-02-21	289
 6649	2026-02-24	394
-6650	2026-11-06	263
 6651	2026-09-06	259
 6652	2026-08-31	169
 6653	2026-10-17	10
@@ -8721,7 +8710,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 7290	2026-03-28	348
 7291	2026-03-05	332
 7292	2026-04-14	324
-7293	2026-02-26	263
 7294	2026-12-07	49
 7295	2026-09-09	390
 7296	2026-11-27	52
@@ -8816,7 +8804,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 7385	2026-05-25	286
 7386	2026-05-28	348
 7387	2026-07-10	445
-7388	2026-10-01	263
 7389	2026-08-20	478
 7390	2026-09-17	166
 7391	2026-02-25	278
@@ -9608,7 +9595,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 8177	2026-03-11	242
 8178	2026-08-21	463
 8179	2026-07-19	374
-8180	2026-02-20	263
 8181	2026-10-02	433
 8182	2026-04-21	360
 8183	2026-03-03	162
@@ -10017,7 +10003,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 8586	2026-01-08	224
 8587	2026-07-04	306
 8588	2026-12-18	127
-8589	2026-07-15	263
 8590	2026-01-31	75
 8591	2026-01-14	118
 8592	2026-11-16	172
@@ -12253,7 +12238,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 10822	2026-11-13	230
 10823	2026-08-19	368
 10824	2026-02-01	181
-10825	2026-05-09	263
 10826	2026-07-26	202
 10827	2026-12-07	181
 10828	2026-04-16	252
@@ -13368,7 +13352,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 11937	2026-08-16	19
 11938	2026-08-17	362
 11939	2026-10-06	123
-11940	2026-08-01	263
 11941	2026-01-27	97
 11942	2026-01-19	460
 11943	2026-03-18	362
@@ -14196,7 +14179,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 12765	2026-03-15	45
 12766	2026-05-30	315
 12767	2026-07-21	363
-12768	2026-05-03	263
 12769	2026-10-15	377
 12770	2026-07-24	80
 12771	2026-09-16	28
@@ -14599,7 +14581,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 13168	2026-08-08	6
 13169	2026-04-03	330
 13170	2026-01-17	157
-13171	2026-01-06	263
 13172	2026-03-06	43
 13173	2026-11-03	94
 13174	2026-10-25	142
@@ -15483,7 +15464,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 14052	2026-05-24	113
 14053	2026-09-08	490
 14054	2026-07-31	170
-14055	2026-05-17	263
 14056	2026-05-17	400
 14057	2026-04-14	211
 14058	2026-06-27	467
@@ -15930,7 +15910,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 14499	2026-02-20	277
 14500	2026-01-22	166
 14501	2026-12-13	282
-14502	2026-09-26	263
 14503	2026-09-13	303
 14504	2026-01-27	456
 14505	2026-12-05	81
@@ -16446,7 +16425,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 15015	2026-12-06	161
 15016	2026-08-21	166
 15017	2026-10-08	303
-15018	2026-08-23	263
 15019	2026-02-04	330
 15020	2026-09-10	470
 15021	2026-09-19	294
@@ -16603,7 +16581,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 15172	2026-01-23	148
 15173	2026-06-14	447
 15174	2026-10-07	82
-15175	2026-12-30	263
 15176	2026-03-31	262
 15177	2026-03-01	292
 15178	2026-09-11	268
@@ -16749,7 +16726,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 15318	2026-03-01	434
 15319	2026-03-29	365
 15320	2026-01-23	15
-15321	2026-02-09	263
 15322	2026-02-01	280
 15323	2026-03-07	27
 15324	2026-12-14	412
@@ -17641,7 +17617,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 16210	2026-08-11	74
 16211	2026-12-31	424
 16212	2026-02-27	324
-16213	2026-11-28	263
 16214	2026-05-15	264
 16215	2026-10-22	331
 16216	2026-06-22	382
@@ -18098,7 +18073,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 16667	2026-01-15	324
 16668	2026-11-04	206
 16669	2026-09-16	201
-16670	2026-08-16	263
 16671	2026-06-06	401
 16672	2026-04-27	23
 16673	2026-05-07	291
@@ -19010,7 +18984,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 17579	2026-11-03	276
 17580	2026-10-04	145
 17581	2026-10-21	37
-17582	2026-08-27	263
 17583	2026-05-16	201
 17584	2026-04-22	414
 17585	2026-02-28	121
@@ -19468,7 +19441,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 18037	2026-09-03	421
 18038	2026-03-29	334
 18039	2026-01-10	90
-18040	2026-05-06	263
 18041	2026-06-07	203
 18042	2026-01-22	109
 18043	2026-12-10	497
@@ -19513,7 +19485,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 18082	2026-08-12	154
 18083	2026-06-12	66
 18084	2026-10-23	318
-18085	2026-03-05	263
 18086	2026-04-30	280
 18087	2026-05-13	432
 18088	2026-11-25	41
@@ -19576,7 +19547,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 18145	2026-01-04	483
 18146	2026-09-02	66
 18147	2026-04-02	222
-18148	2026-01-26	263
 18149	2026-09-14	180
 18150	2026-05-19	405
 18151	2026-03-21	3
@@ -20168,7 +20138,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 18737	2026-10-20	290
 18738	2026-07-17	319
 18739	2026-02-16	455
-18740	2026-05-30	263
 18741	2026-06-22	47
 18742	2026-07-07	484
 18743	2026-01-30	203
@@ -21305,7 +21274,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 19874	2026-05-05	316
 19875	2026-11-24	143
 19876	2026-01-31	460
-19877	2026-11-05	263
 19878	2026-04-28	126
 19879	2026-10-07	147
 19880	2026-04-24	445
@@ -21382,7 +21350,6 @@ COPY public.eventregistration (registrationid, registrationdate, eventid) FROM s
 19951	2026-06-11	238
 19952	2026-03-22	367
 19953	2026-09-12	445
-19954	2026-06-04	263
 19955	2026-10-01	336
 19956	2026-01-28	122
 19957	2026-09-29	327
@@ -22176,361 +22143,160 @@ COPY public.grouptrip (groupid, tripid) FROM stdin;
 
 COPY public.guide (guideid, guidename, phone, email, specialization, region, experienceyears) FROM stdin;
 1	Guide_1	050-6424512	guide1@trip.com	Hiking	Center	2
-2	Guide_2	050-8504531	guide2@trip.com	Extreme	Jerusalem	13
-3	Guide_3	050-2618557	guide3@trip.com	Hiking	Jerusalem	6
-4	Guide_4	050-9662559	guide4@trip.com	History	Jerusalem	24
 5	Guide_5	050-4123240	guide5@trip.com	Hiking	South	12
-6	Guide_6	050-7278036	guide6@trip.com	Culinary	Jerusalem	22
 7	Guide_7	050-8162863	guide7@trip.com	History	Center	9
-8	Guide_8	050-4279774	guide8@trip.com	Culinary	Jerusalem	4
-9	Guide_9	050-8659647	guide9@trip.com	Extreme	South	16
 10	Guide_10	050-4431795	guide10@trip.com	Hiking	South	30
 11	Guide_11	050-3463167	guide11@trip.com	Culinary	Jerusalem	11
-12	Guide_12	050-9624299	guide12@trip.com	Extreme	Jerusalem	18
 13	Guide_13	050-1428285	guide13@trip.com	Hiking	South	29
-14	Guide_14	050-4012397	guide14@trip.com	Extreme	Center	17
 15	Guide_15	050-3204796	guide15@trip.com	Culinary	Center	9
-16	Guide_16	050-7234677	guide16@trip.com	Extreme	Center	22
-17	Guide_17	050-1940983	guide17@trip.com	Hiking	Jerusalem	11
 18	Guide_18	050-8477604	guide18@trip.com	History	South	2
 19	Guide_19	050-4418152	guide19@trip.com	Hiking	Center	1
-20	Guide_20	050-2024371	guide20@trip.com	Extreme	South	20
 21	Guide_21	050-5034202	guide21@trip.com	Hiking	Jerusalem	25
-22	Guide_22	050-5440778	guide22@trip.com	Hiking	Center	13
-23	Guide_23	050-7929133	guide23@trip.com	History	Jerusalem	30
 24	Guide_24	050-9317518	guide24@trip.com	History	Center	21
-25	Guide_25	050-1775080	guide25@trip.com	Extreme	North	3
-26	Guide_26	050-9102521	guide26@trip.com	Hiking	Jerusalem	5
-27	Guide_27	050-4055664	guide27@trip.com	History	Jerusalem	4
 28	Guide_28	050-8349157	guide28@trip.com	Culinary	Center	11
-29	Guide_29	050-4934389	guide29@trip.com	Extreme	South	4
-30	Guide_30	050-9304357	guide30@trip.com	Culinary	Jerusalem	6
-31	Guide_31	050-4826319	guide31@trip.com	History	North	23
 32	Guide_32	050-4986572	guide32@trip.com	Extreme	Jerusalem	1
 33	Guide_33	050-9988819	guide33@trip.com	History	South	19
-34	Guide_34	050-8693057	guide34@trip.com	Culinary	Jerusalem	26
-35	Guide_35	050-7425514	guide35@trip.com	Hiking	Jerusalem	27
-36	Guide_36	050-3224563	guide36@trip.com	Culinary	North	15
-37	Guide_37	050-9942400	guide37@trip.com	Hiking	Jerusalem	13
-38	Guide_38	050-2896148	guide38@trip.com	Extreme	South	25
 39	Guide_39	050-9057175	guide39@trip.com	History	Jerusalem	10
 40	Guide_40	050-3192738	guide40@trip.com	History	Center	29
 41	Guide_41	050-2897586	guide41@trip.com	Extreme	Center	22
-42	Guide_42	050-4605759	guide42@trip.com	Culinary	North	15
-43	Guide_43	050-2705849	guide43@trip.com	Culinary	North	21
-44	Guide_44	050-9093601	guide44@trip.com	History	Center	29
 45	Guide_45	050-6375111	guide45@trip.com	Culinary	South	23
-46	Guide_46	050-4151075	guide46@trip.com	Extreme	South	27
-47	Guide_47	050-4499672	guide47@trip.com	Hiking	Center	5
-48	Guide_48	050-4299375	guide48@trip.com	History	Center	20
 49	Guide_49	050-7315753	guide49@trip.com	History	North	16
-50	Guide_50	050-1065406	guide50@trip.com	Extreme	South	28
 51	Guide_51	050-9761111	guide51@trip.com	Culinary	South	16
-52	Guide_52	050-5661035	guide52@trip.com	History	Center	27
 53	Guide_53	050-9895858	guide53@trip.com	Culinary	Center	8
-54	Guide_54	050-2117508	guide54@trip.com	Extreme	Jerusalem	6
 55	Guide_55	050-6517702	guide55@trip.com	Extreme	North	2
 56	Guide_56	050-1556098	guide56@trip.com	Extreme	Jerusalem	13
 57	Guide_57	050-9196436	guide57@trip.com	History	South	1
 58	Guide_58	050-8751771	guide58@trip.com	Culinary	North	20
 59	Guide_59	050-4922080	guide59@trip.com	Culinary	Jerusalem	19
 60	Guide_60	050-4955642	guide60@trip.com	Hiking	South	15
-61	Guide_61	050-8950338	guide61@trip.com	Culinary	South	28
 62	Guide_62	050-9050426	guide62@trip.com	Extreme	North	23
-63	Guide_63	050-4858907	guide63@trip.com	Hiking	Jerusalem	4
 64	Guide_64	050-3374940	guide64@trip.com	History	South	12
 65	Guide_65	050-2477767	guide65@trip.com	Extreme	North	5
-66	Guide_66	050-5654811	guide66@trip.com	Culinary	North	8
-67	Guide_67	050-4232110	guide67@trip.com	Hiking	Center	27
-68	Guide_68	050-6026636	guide68@trip.com	Hiking	South	30
-69	Guide_69	050-1983913	guide69@trip.com	History	South	10
-70	Guide_70	050-4873581	guide70@trip.com	Culinary	South	24
-71	Guide_71	050-3588540	guide71@trip.com	History	Center	8
 72	Guide_72	050-3641861	guide72@trip.com	History	South	25
-73	Guide_73	050-5147858	guide73@trip.com	Culinary	Center	17
-74	Guide_74	050-4727872	guide74@trip.com	Hiking	South	24
 75	Guide_75	050-6193714	guide75@trip.com	Culinary	Center	23
 76	Guide_76	050-3660338	guide76@trip.com	Hiking	South	10
-77	Guide_77	050-5339572	guide77@trip.com	Culinary	Jerusalem	6
-78	Guide_78	050-8418210	guide78@trip.com	Extreme	North	28
-79	Guide_79	050-2228121	guide79@trip.com	Culinary	North	11
 80	Guide_80	050-3725665	guide80@trip.com	Hiking	North	26
 81	Guide_81	050-9047766	guide81@trip.com	Hiking	North	1
-82	Guide_82	050-3976528	guide82@trip.com	Hiking	North	4
-83	Guide_83	050-1385786	guide83@trip.com	Hiking	Jerusalem	13
-84	Guide_84	050-8049698	guide84@trip.com	Extreme	Jerusalem	5
-85	Guide_85	050-3286545	guide85@trip.com	History	Center	20
-86	Guide_86	050-1446643	guide86@trip.com	Extreme	North	15
 87	Guide_87	050-6521170	guide87@trip.com	Extreme	South	1
 88	Guide_88	050-6280622	guide88@trip.com	Extreme	North	25
-89	Guide_89	050-8280539	guide89@trip.com	Hiking	South	29
-90	Guide_90	050-1607182	guide90@trip.com	Hiking	Center	11
 91	Guide_91	050-5980621	guide91@trip.com	Culinary	Center	19
-92	Guide_92	050-7660360	guide92@trip.com	History	North	12
-93	Guide_93	050-5352415	guide93@trip.com	Extreme	North	11
 94	Guide_94	050-8345374	guide94@trip.com	Culinary	Jerusalem	17
-95	Guide_95	050-3026899	guide95@trip.com	Hiking	Jerusalem	4
-96	Guide_96	050-7057670	guide96@trip.com	Hiking	Center	21
-97	Guide_97	050-8776395	guide97@trip.com	Culinary	Jerusalem	18
 98	Guide_98	050-4741811	guide98@trip.com	Culinary	Center	5
 99	Guide_99	050-4429970	guide99@trip.com	Culinary	South	2
 100	Guide_100	050-6044200	guide100@trip.com	Extreme	South	3
-101	Guide_101	050-6069835	guide101@trip.com	Extreme	Jerusalem	9
-102	Guide_102	050-6568932	guide102@trip.com	Hiking	North	18
 103	Guide_103	050-8155648	guide103@trip.com	Culinary	Center	10
 104	Guide_104	050-2405714	guide104@trip.com	Extreme	Center	23
-105	Guide_105	050-2305983	guide105@trip.com	History	South	28
-106	Guide_106	050-8772317	guide106@trip.com	History	Center	21
 107	Guide_107	050-9045258	guide107@trip.com	History	Jerusalem	29
-108	Guide_108	050-9930610	guide108@trip.com	Extreme	South	17
 109	Guide_109	050-2195466	guide109@trip.com	Culinary	South	6
 110	Guide_110	050-1549166	guide110@trip.com	Hiking	North	17
-111	Guide_111	050-8429364	guide111@trip.com	Culinary	North	7
-112	Guide_112	050-1368959	guide112@trip.com	Extreme	Center	14
-113	Guide_113	050-1668922	guide113@trip.com	Hiking	North	10
 114	Guide_114	050-3023890	guide114@trip.com	Extreme	South	23
 115	Guide_115	050-7843059	guide115@trip.com	Hiking	North	16
 116	Guide_116	050-2525918	guide116@trip.com	Extreme	Center	14
-117	Guide_117	050-8648888	guide117@trip.com	Hiking	South	14
 118	Guide_118	050-5106206	guide118@trip.com	Extreme	North	23
-119	Guide_119	050-1575029	guide119@trip.com	History	Jerusalem	1
-120	Guide_120	050-7340145	guide120@trip.com	Extreme	South	10
-121	Guide_121	050-8133901	guide121@trip.com	History	South	29
 122	Guide_122	050-7505089	guide122@trip.com	Hiking	Jerusalem	8
-123	Guide_123	050-4923442	guide123@trip.com	Culinary	Center	28
-124	Guide_124	050-2609057	guide124@trip.com	Culinary	Center	6
-125	Guide_125	050-4343935	guide125@trip.com	History	Jerusalem	18
-126	Guide_126	050-5504055	guide126@trip.com	Culinary	Center	9
-127	Guide_127	050-8542014	guide127@trip.com	History	Center	7
 128	Guide_128	050-8456377	guide128@trip.com	Hiking	Center	2
 129	Guide_129	050-9450662	guide129@trip.com	Culinary	North	25
-130	Guide_130	050-5681367	guide130@trip.com	Culinary	South	8
-131	Guide_131	050-4909210	guide131@trip.com	Extreme	Jerusalem	12
-132	Guide_132	050-3978211	guide132@trip.com	Culinary	South	28
 133	Guide_133	050-9781626	guide133@trip.com	Culinary	South	23
 134	Guide_134	050-7489779	guide134@trip.com	Extreme	South	14
-135	Guide_135	050-9024429	guide135@trip.com	Hiking	Center	27
 136	Guide_136	050-5053497	guide136@trip.com	Extreme	Center	2
-137	Guide_137	050-8346489	guide137@trip.com	Culinary	Center	3
-138	Guide_138	050-2678064	guide138@trip.com	History	Center	5
 139	Guide_139	050-4759113	guide139@trip.com	Culinary	Jerusalem	20
 140	Guide_140	050-1342968	guide140@trip.com	History	Jerusalem	11
-141	Guide_141	050-4111220	guide141@trip.com	History	Jerusalem	27
-142	Guide_142	050-3296874	guide142@trip.com	History	Jerusalem	22
-143	Guide_143	050-5308234	guide143@trip.com	Hiking	North	29
-144	Guide_144	050-8463789	guide144@trip.com	History	Center	14
 145	Guide_145	050-6585305	guide145@trip.com	Hiking	South	16
 146	Guide_146	050-3164372	guide146@trip.com	History	North	21
-147	Guide_147	050-5905939	guide147@trip.com	Hiking	North	14
 148	Guide_148	050-8298893	guide148@trip.com	Hiking	North	16
-149	Guide_149	050-5843391	guide149@trip.com	Extreme	South	26
-150	Guide_150	050-7412391	guide150@trip.com	Extreme	Jerusalem	26
 151	Guide_151	050-3237772	guide151@trip.com	Hiking	North	6
 152	Guide_152	050-5216550	guide152@trip.com	Hiking	Jerusalem	28
-153	Guide_153	050-3047605	guide153@trip.com	Culinary	Jerusalem	12
-154	Guide_154	050-2369259	guide154@trip.com	Culinary	South	7
-155	Guide_155	050-1095635	guide155@trip.com	History	South	24
-156	Guide_156	050-5611948	guide156@trip.com	History	Center	28
-157	Guide_157	050-7475162	guide157@trip.com	Extreme	South	16
-158	Guide_158	050-1379377	guide158@trip.com	Culinary	South	24
 159	Guide_159	050-5782511	guide159@trip.com	Extreme	South	1
 160	Guide_160	050-7647286	guide160@trip.com	Culinary	Jerusalem	2
 161	Guide_161	050-7416508	guide161@trip.com	Culinary	Jerusalem	12
 162	Guide_162	050-6537714	guide162@trip.com	Hiking	Center	26
 163	Guide_163	050-6955295	guide163@trip.com	History	North	16
 164	Guide_164	050-4273140	guide164@trip.com	Culinary	South	26
-165	Guide_165	050-9306765	guide165@trip.com	Culinary	Jerusalem	21
 166	Guide_166	050-7175636	guide166@trip.com	Extreme	North	22
 167	Guide_167	050-1568362	guide167@trip.com	History	Center	27
 168	Guide_168	050-7156874	guide168@trip.com	History	Jerusalem	1
-169	Guide_169	050-4175413	guide169@trip.com	Culinary	Center	7
 170	Guide_170	050-4526314	guide170@trip.com	History	Center	3
-171	Guide_171	050-2336022	guide171@trip.com	History	North	10
 172	Guide_172	050-2392109	guide172@trip.com	History	Jerusalem	22
 173	Guide_173	050-2600657	guide173@trip.com	History	North	13
-174	Guide_174	050-9671924	guide174@trip.com	History	Center	19
-175	Guide_175	050-7961963	guide175@trip.com	History	South	23
+89	Guide_89	050-8280539	guide89@trip.com	Senior Guide	South	29
 176	Guide_176	050-1137690	guide176@trip.com	Culinary	South	12
 177	Guide_177	050-6880729	guide177@trip.com	Culinary	Center	15
-178	Guide_178	050-8296641	guide178@trip.com	Culinary	Center	18
 179	Guide_179	050-9853333	guide179@trip.com	Extreme	South	23
 180	Guide_180	050-7548795	guide180@trip.com	Culinary	Center	2
 181	Guide_181	050-4993938	guide181@trip.com	History	North	1
-182	Guide_182	050-1022073	guide182@trip.com	Hiking	Center	15
-183	Guide_183	050-9238477	guide183@trip.com	Culinary	South	14
-184	Guide_184	050-3187626	guide184@trip.com	Culinary	North	24
 185	Guide_185	050-2696542	guide185@trip.com	Hiking	Center	4
-186	Guide_186	050-4141773	guide186@trip.com	Culinary	Center	5
 187	Guide_187	050-6673584	guide187@trip.com	Extreme	Center	21
-188	Guide_188	050-5365615	guide188@trip.com	Hiking	Center	7
-189	Guide_189	050-4821572	guide189@trip.com	History	Jerusalem	7
-190	Guide_190	050-7539445	guide190@trip.com	Hiking	Jerusalem	20
-191	Guide_191	050-5206805	guide191@trip.com	History	North	16
 192	Guide_192	050-7889785	guide192@trip.com	Extreme	Center	2
 193	Guide_193	050-6913611	guide193@trip.com	Hiking	Center	9
 194	Guide_194	050-2387908	guide194@trip.com	Extreme	South	9
-195	Guide_195	050-7676946	guide195@trip.com	History	South	27
 196	Guide_196	050-8681026	guide196@trip.com	Extreme	Jerusalem	7
-197	Guide_197	050-2163867	guide197@trip.com	History	Jerusalem	20
 198	Guide_198	050-7803285	guide198@trip.com	Culinary	Center	29
 199	Guide_199	050-2626879	guide199@trip.com	Culinary	Jerusalem	22
 200	Guide_200	050-7572086	guide200@trip.com	Culinary	South	21
-201	Guide_201	050-6555975	guide201@trip.com	Extreme	South	10
-202	Guide_202	050-3273317	guide202@trip.com	Hiking	Center	17
-203	Guide_203	050-6634814	guide203@trip.com	Extreme	Jerusalem	20
 204	Guide_204	050-5997128	guide204@trip.com	Culinary	North	1
 205	Guide_205	050-6416198	guide205@trip.com	Culinary	Jerusalem	9
-206	Guide_206	050-8425383	guide206@trip.com	History	Center	16
-207	Guide_207	050-1724791	guide207@trip.com	Extreme	South	19
 208	Guide_208	050-9794387	guide208@trip.com	Hiking	Jerusalem	16
 209	Guide_209	050-7288378	guide209@trip.com	Culinary	Center	17
-210	Guide_210	050-2338945	guide210@trip.com	Hiking	North	8
-211	Guide_211	050-9028943	guide211@trip.com	Culinary	Jerusalem	30
-212	Guide_212	050-4031903	guide212@trip.com	History	South	26
-213	Guide_213	050-3429096	guide213@trip.com	Culinary	South	16
-214	Guide_214	050-4168147	guide214@trip.com	History	Center	11
-215	Guide_215	050-6219847	guide215@trip.com	Hiking	Center	22
-216	Guide_216	050-9208558	guide216@trip.com	Extreme	North	17
-217	Guide_217	050-9762814	guide217@trip.com	Culinary	Jerusalem	9
 218	Guide_218	050-8098481	guide218@trip.com	Culinary	South	28
 219	Guide_219	050-8399921	guide219@trip.com	History	South	1
-220	Guide_220	050-5952564	guide220@trip.com	History	South	12
-221	Guide_221	050-6744519	guide221@trip.com	Culinary	South	5
-222	Guide_222	050-4005356	guide222@trip.com	Hiking	Center	9
 223	Guide_223	050-1611435	guide223@trip.com	Culinary	North	2
-224	Guide_224	050-7431821	guide224@trip.com	History	Jerusalem	13
 225	Guide_225	050-7408771	guide225@trip.com	History	South	18
-226	Guide_226	050-2483194	guide226@trip.com	Hiking	Center	22
-227	Guide_227	050-5982370	guide227@trip.com	Hiking	Center	22
-228	Guide_228	050-2350799	guide228@trip.com	Hiking	South	15
 229	Guide_229	050-6203473	guide229@trip.com	Hiking	South	5
 230	Guide_230	050-6085283	guide230@trip.com	Hiking	South	8
 231	Guide_231	050-1798697	guide231@trip.com	Extreme	South	7
-232	Guide_232	050-9658460	guide232@trip.com	Culinary	North	29
-233	Guide_233	050-9895031	guide233@trip.com	Culinary	North	18
 234	Guide_234	050-4455706	guide234@trip.com	History	North	2
 235	Guide_235	050-9064041	guide235@trip.com	History	Center	6
-236	Guide_236	050-1228728	guide236@trip.com	Extreme	Jerusalem	30
-237	Guide_237	050-2946444	guide237@trip.com	Hiking	Center	26
-238	Guide_238	050-7135552	guide238@trip.com	Hiking	North	9
-239	Guide_239	050-1618536	guide239@trip.com	Extreme	Jerusalem	9
 240	Guide_240	050-8976742	guide240@trip.com	Hiking	Center	1
 241	Guide_241	050-9948140	guide241@trip.com	Hiking	Center	13
-242	Guide_242	050-8657950	guide242@trip.com	Hiking	Center	12
 243	Guide_243	050-4831960	guide243@trip.com	History	Center	27
 244	Guide_244	050-7487346	guide244@trip.com	Culinary	South	24
 245	Guide_245	050-3231134	guide245@trip.com	History	Center	24
 246	Guide_246	050-6062744	guide246@trip.com	History	South	11
 247	Guide_247	050-2426951	guide247@trip.com	Extreme	North	30
-248	Guide_248	050-1316414	guide248@trip.com	Hiking	South	17
 249	Guide_249	050-5702812	guide249@trip.com	History	Center	19
 250	Guide_250	050-9116175	guide250@trip.com	Extreme	Jerusalem	28
-251	Guide_251	050-4084091	guide251@trip.com	Hiking	South	26
 252	Guide_252	050-7528476	guide252@trip.com	Culinary	North	2
-253	Guide_253	050-5546518	guide253@trip.com	History	Jerusalem	8
 254	Guide_254	050-8145323	guide254@trip.com	Hiking	North	24
 255	Guide_255	050-2593549	guide255@trip.com	Extreme	Jerusalem	1
-256	Guide_256	050-9012585	guide256@trip.com	History	North	15
 257	Guide_257	050-9436937	guide257@trip.com	Hiking	South	4
-258	Guide_258	050-9746910	guide258@trip.com	Hiking	South	28
-259	Guide_259	050-8475941	guide259@trip.com	Culinary	Jerusalem	29
-260	Guide_260	050-2537573	guide260@trip.com	History	Jerusalem	15
-261	Guide_261	050-2665788	guide261@trip.com	Hiking	North	29
-262	Guide_262	050-6388400	guide262@trip.com	Extreme	South	4
-263	Guide_263	050-3213913	guide263@trip.com	History	Jerusalem	29
-264	Guide_264	050-8986349	guide264@trip.com	Hiking	Center	25
-265	Guide_265	050-1695143	guide265@trip.com	Culinary	South	25
 266	Guide_266	050-5427421	guide266@trip.com	Extreme	South	22
 267	Guide_267	050-3532151	guide267@trip.com	Hiking	Center	12
 268	Guide_268	050-3606096	guide268@trip.com	History	South	1
-269	Guide_269	050-5213034	guide269@trip.com	Hiking	Center	19
-270	Guide_270	050-7388259	guide270@trip.com	Extreme	South	15
-271	Guide_271	050-6941374	guide271@trip.com	Culinary	Jerusalem	29
-272	Guide_272	050-9712890	guide272@trip.com	Culinary	North	20
-273	Guide_273	050-6433454	guide273@trip.com	History	Jerusalem	14
-274	Guide_274	050-4619001	guide274@trip.com	Culinary	North	30
 275	Guide_275	050-8292096	guide275@trip.com	History	Jerusalem	25
 276	Guide_276	050-8531691	guide276@trip.com	Extreme	Center	13
-277	Guide_277	050-5604490	guide277@trip.com	Extreme	Jerusalem	4
 278	Guide_278	050-7115131	guide278@trip.com	Extreme	South	17
-279	Guide_279	050-3486715	guide279@trip.com	History	Center	30
-280	Guide_280	050-6987249	guide280@trip.com	Hiking	Jerusalem	18
-281	Guide_281	050-3883728	guide281@trip.com	Extreme	Jerusalem	6
-282	Guide_282	050-6023942	guide282@trip.com	Culinary	South	29
 283	Guide_283	050-2689399	guide283@trip.com	Extreme	Center	28
-284	Guide_284	050-9578395	guide284@trip.com	Culinary	North	15
-285	Guide_285	050-4277844	guide285@trip.com	Culinary	Center	15
-286	Guide_286	050-9238891	guide286@trip.com	Culinary	Jerusalem	7
-287	Guide_287	050-7370944	guide287@trip.com	History	Jerusalem	19
 288	Guide_288	050-8177077	guide288@trip.com	History	Center	3
-289	Guide_289	050-1636011	guide289@trip.com	History	Center	14
-290	Guide_290	050-8790161	guide290@trip.com	Hiking	Jerusalem	11
-291	Guide_291	050-6289029	guide291@trip.com	Extreme	North	14
 292	Guide_292	050-5203275	guide292@trip.com	Hiking	Center	23
-293	Guide_293	050-5024131	guide293@trip.com	History	South	23
 294	Guide_294	050-3475196	guide294@trip.com	Hiking	Jerusalem	15
-295	Guide_295	050-6274575	guide295@trip.com	Extreme	North	26
 296	Guide_296	050-7159202	guide296@trip.com	Hiking	Jerusalem	25
-297	Guide_297	050-8754755	guide297@trip.com	Extreme	Center	24
-298	Guide_298	050-9699250	guide298@trip.com	Extreme	South	8
-299	Guide_299	050-5936022	guide299@trip.com	History	North	30
 300	Guide_300	050-5585123	guide300@trip.com	History	Jerusalem	15
-301	Guide_301	050-6607320	guide301@trip.com	Culinary	North	9
-302	Guide_302	050-8573113	guide302@trip.com	History	Center	22
 303	Guide_303	050-9435394	guide303@trip.com	Hiking	Jerusalem	1
-304	Guide_304	050-5588749	guide304@trip.com	Hiking	South	11
-305	Guide_305	050-6042642	guide305@trip.com	Extreme	South	12
-306	Guide_306	050-8380017	guide306@trip.com	Extreme	Jerusalem	30
 307	Guide_307	050-6500494	guide307@trip.com	Culinary	Center	11
-308	Guide_308	050-7189717	guide308@trip.com	Extreme	Jerusalem	20
 309	Guide_309	050-4353647	guide309@trip.com	Extreme	Center	2
 310	Guide_310	050-9263127	guide310@trip.com	Hiking	North	29
 311	Guide_311	050-4601242	guide311@trip.com	History	Jerusalem	1
 312	Guide_312	050-4479506	guide312@trip.com	History	Center	13
 313	Guide_313	050-4160764	guide313@trip.com	Extreme	Jerusalem	27
-314	Guide_314	050-8372201	guide314@trip.com	Culinary	Jerusalem	24
-315	Guide_315	050-3983346	guide315@trip.com	Hiking	Jerusalem	11
-316	Guide_316	050-3201848	guide316@trip.com	Hiking	North	18
-317	Guide_317	050-1225797	guide317@trip.com	Hiking	Jerusalem	26
-318	Guide_318	050-9846167	guide318@trip.com	Culinary	North	4
-319	Guide_319	050-5366635	guide319@trip.com	Extreme	Center	28
-320	Guide_320	050-8472369	guide320@trip.com	Hiking	South	3
-321	Guide_321	050-2740337	guide321@trip.com	History	Center	6
 322	Guide_322	050-8745945	guide322@trip.com	Extreme	Jerusalem	19
-323	Guide_323	050-7574910	guide323@trip.com	Culinary	Jerusalem	20
 324	Guide_324	050-3128267	guide324@trip.com	Extreme	Center	23
 325	Guide_325	050-2495443	guide325@trip.com	Hiking	Center	30
 326	Guide_326	050-1028500	guide326@trip.com	Culinary	Center	23
-327	Guide_327	050-3848784	guide327@trip.com	History	Jerusalem	15
-328	Guide_328	050-9376820	guide328@trip.com	Extreme	North	28
 329	Guide_329	050-6879230	guide329@trip.com	Culinary	Center	1
 330	Guide_330	050-3915483	guide330@trip.com	Hiking	Center	13
 331	Guide_331	050-7884776	guide331@trip.com	History	North	1
 332	Guide_332	050-1478790	guide332@trip.com	Extreme	North	5
-333	Guide_333	050-5144022	guide333@trip.com	Culinary	North	13
 334	Guide_334	050-4353953	guide334@trip.com	History	South	21
 335	Guide_335	050-8828354	guide335@trip.com	Hiking	Jerusalem	17
-336	Guide_336	050-6658950	guide336@trip.com	Culinary	South	14
-337	Guide_337	050-8620364	guide337@trip.com	History	North	25
 338	Guide_338	050-9122534	guide338@trip.com	Hiking	Jerusalem	5
 339	Guide_339	050-8525306	guide339@trip.com	History	North	29
 340	Guide_340	050-7920222	guide340@trip.com	Hiking	North	12
-341	Guide_341	050-7615041	guide341@trip.com	Culinary	South	30
 342	Guide_342	050-4882552	guide342@trip.com	History	Center	1
 343	Guide_343	050-5621585	guide343@trip.com	Hiking	Center	1
 344	Guide_344	050-5992231	guide344@trip.com	Extreme	Center	12
 345	Guide_345	050-8410385	guide345@trip.com	History	Center	21
-346	Guide_346	050-8148927	guide346@trip.com	History	North	23
-347	Guide_347	050-4919764	guide347@trip.com	Culinary	North	25
-348	Guide_348	050-3187807	guide348@trip.com	Culinary	South	5
-349	Guide_349	050-7361150	guide349@trip.com	Extreme	Center	7
 350	Guide_350	050-3414116	guide350@trip.com	History	South	25
-351	Guide_351	050-8491816	guide351@trip.com	Culinary	Center	6
-352	Guide_352	050-4903142	guide352@trip.com	Extreme	Jerusalem	23
-353	Guide_353	050-7334932	guide353@trip.com	Culinary	Jerusalem	24
-354	Guide_354	050-1391501	guide354@trip.com	Extreme	Center	12
 355	Guide_355	050-9699686	guide355@trip.com	Extreme	Jerusalem	4
-356	Guide_356	050-6373921	guide356@trip.com	Hiking	North	16
 357	Guide_357	050-9131042	guide357@trip.com	History	South	13
 358	Guide_358	050-1771021	guide358@trip.com	Extreme	Center	1
 359	Guide_359	050-6317025	guide359@trip.com	Hiking	North	1
@@ -22538,143 +22304,343 @@ COPY public.guide (guideid, guidename, phone, email, specialization, region, exp
 361	Guide_361	050-4817670	guide361@trip.com	Hiking	South	8
 362	Guide_362	050-1496849	guide362@trip.com	Hiking	South	9
 363	Guide_363	050-8121629	guide363@trip.com	Hiking	South	3
-364	Guide_364	050-3157610	guide364@trip.com	Culinary	Center	17
-365	Guide_365	050-7951392	guide365@trip.com	Extreme	South	21
-366	Guide_366	050-5173100	guide366@trip.com	History	North	20
-367	Guide_367	050-8906132	guide367@trip.com	History	Center	22
-368	Guide_368	050-7696670	guide368@trip.com	History	South	15
 369	Guide_369	050-6075448	guide369@trip.com	Culinary	North	22
-370	Guide_370	050-1383375	guide370@trip.com	Extreme	South	10
-371	Guide_371	050-7991174	guide371@trip.com	History	South	15
 372	Guide_372	050-4783311	guide372@trip.com	Culinary	North	28
-373	Guide_373	050-4737960	guide373@trip.com	Extreme	Center	28
-374	Guide_374	050-5055501	guide374@trip.com	Extreme	North	29
 375	Guide_375	050-8826993	guide375@trip.com	Hiking	North	10
-376	Guide_376	050-4501876	guide376@trip.com	Hiking	North	21
-377	Guide_377	050-7597367	guide377@trip.com	Extreme	South	18
-378	Guide_378	050-7339102	guide378@trip.com	Hiking	South	19
-379	Guide_379	050-3282345	guide379@trip.com	History	Center	12
-380	Guide_380	050-6871243	guide380@trip.com	Extreme	North	27
-381	Guide_381	050-3100247	guide381@trip.com	History	North	28
-382	Guide_382	050-2481192	guide382@trip.com	Extreme	Jerusalem	21
-383	Guide_383	050-6579679	guide383@trip.com	Culinary	North	18
-384	Guide_384	050-4252745	guide384@trip.com	Culinary	North	16
-385	Guide_385	050-6651680	guide385@trip.com	Hiking	Center	5
-386	Guide_386	050-7868352	guide386@trip.com	Extreme	South	19
-387	Guide_387	050-1593760	guide387@trip.com	Hiking	Center	22
-388	Guide_388	050-8299084	guide388@trip.com	Hiking	North	19
-389	Guide_389	050-3176449	guide389@trip.com	Culinary	North	16
 390	Guide_390	050-2820059	guide390@trip.com	History	South	2
-391	Guide_391	050-6048463	guide391@trip.com	Extreme	South	27
-392	Guide_392	050-5597685	guide392@trip.com	Extreme	Center	19
 393	Guide_393	050-3807601	guide393@trip.com	History	Center	13
-394	Guide_394	050-2214505	guide394@trip.com	History	South	29
 395	Guide_395	050-9728856	guide395@trip.com	Hiking	North	19
 396	Guide_396	050-4462987	guide396@trip.com	Extreme	North	5
 397	Guide_397	050-3598938	guide397@trip.com	History	Jerusalem	17
 398	Guide_398	050-2901349	guide398@trip.com	Culinary	Center	30
-399	Guide_399	050-3387263	guide399@trip.com	Culinary	Center	22
-400	Guide_400	050-6188155	guide400@trip.com	Extreme	Center	21
 401	Guide_401	050-6787003	guide401@trip.com	History	Center	18
-402	Guide_402	050-3296779	guide402@trip.com	History	Center	25
 403	Guide_403	050-6909649	guide403@trip.com	History	South	22
-404	Guide_404	050-7229013	guide404@trip.com	Extreme	Jerusalem	23
-405	Guide_405	050-6041912	guide405@trip.com	Culinary	Center	26
-406	Guide_406	050-9386845	guide406@trip.com	Culinary	Center	23
 407	Guide_407	050-8050292	guide407@trip.com	History	Center	9
-408	Guide_408	050-6960874	guide408@trip.com	Culinary	Jerusalem	27
 409	Guide_409	050-1502616	guide409@trip.com	Culinary	South	2
 410	Guide_410	050-1297424	guide410@trip.com	History	South	12
-411	Guide_411	050-5503545	guide411@trip.com	Hiking	Jerusalem	19
-412	Guide_412	050-1384387	guide412@trip.com	Extreme	Jerusalem	11
 413	Guide_413	050-2334719	guide413@trip.com	Hiking	North	2
 414	Guide_414	050-8495477	guide414@trip.com	Culinary	North	15
-415	Guide_415	050-7843879	guide415@trip.com	Culinary	Jerusalem	5
-416	Guide_416	050-4106614	guide416@trip.com	Extreme	Center	19
 417	Guide_417	050-6514168	guide417@trip.com	Extreme	South	16
 418	Guide_418	050-6027540	guide418@trip.com	Culinary	North	12
-419	Guide_419	050-6323302	guide419@trip.com	Culinary	Jerusalem	26
-420	Guide_420	050-1053809	guide420@trip.com	Hiking	South	29
-421	Guide_421	050-3395967	guide421@trip.com	History	South	30
-422	Guide_422	050-8426816	guide422@trip.com	History	Jerusalem	8
 423	Guide_423	050-4967816	guide423@trip.com	History	South	2
-424	Guide_424	050-6748263	guide424@trip.com	Extreme	Jerusalem	20
-425	Guide_425	050-7805841	guide425@trip.com	Hiking	North	17
 426	Guide_426	050-5105259	guide426@trip.com	Extreme	Jerusalem	23
-427	Guide_427	050-4231990	guide427@trip.com	Culinary	North	8
 428	Guide_428	050-3657338	guide428@trip.com	Extreme	South	19
 429	Guide_429	050-8550372	guide429@trip.com	Hiking	North	19
-430	Guide_430	050-6595139	guide430@trip.com	History	South	9
-431	Guide_431	050-2592083	guide431@trip.com	History	South	26
-432	Guide_432	050-1511128	guide432@trip.com	Hiking	South	23
-433	Guide_433	050-3430793	guide433@trip.com	Hiking	Center	8
-434	Guide_434	050-3921715	guide434@trip.com	Hiking	South	6
-435	Guide_435	050-1995469	guide435@trip.com	Extreme	North	10
-436	Guide_436	050-9777866	guide436@trip.com	History	Center	8
-437	Guide_437	050-8594006	guide437@trip.com	History	Center	18
 438	Guide_438	050-1480740	guide438@trip.com	Culinary	North	3
-439	Guide_439	050-2097659	guide439@trip.com	Culinary	South	29
-440	Guide_440	050-5888063	guide440@trip.com	Culinary	Jerusalem	9
 441	Guide_441	050-2705572	guide441@trip.com	Extreme	Center	27
 442	Guide_442	050-2435883	guide442@trip.com	Culinary	North	2
-443	Guide_443	050-1350457	guide443@trip.com	Extreme	South	20
-444	Guide_444	050-8397050	guide444@trip.com	Hiking	Jerusalem	15
-445	Guide_445	050-3700683	guide445@trip.com	History	Jerusalem	18
-446	Guide_446	050-2481721	guide446@trip.com	Hiking	Center	13
-447	Guide_447	050-8539589	guide447@trip.com	Extreme	South	13
 448	Guide_448	050-2810562	guide448@trip.com	Culinary	Center	5
-449	Guide_449	050-5679441	guide449@trip.com	Hiking	South	13
 450	Guide_450	050-1098071	guide450@trip.com	Culinary	Jerusalem	17
-451	Guide_451	050-2535798	guide451@trip.com	Culinary	Center	29
 452	Guide_452	050-1170859	guide452@trip.com	Culinary	Center	21
-453	Guide_453	050-1356682	guide453@trip.com	History	South	9
-454	Guide_454	050-4894794	guide454@trip.com	Culinary	South	6
 455	Guide_455	050-1822024	guide455@trip.com	Extreme	South	25
 456	Guide_456	050-3724966	guide456@trip.com	History	North	2
-457	Guide_457	050-3750714	guide457@trip.com	Extreme	Jerusalem	8
-458	Guide_458	050-9142147	guide458@trip.com	Hiking	South	24
-459	Guide_459	050-3087533	guide459@trip.com	History	Jerusalem	25
-460	Guide_460	050-2523703	guide460@trip.com	History	Center	23
-461	Guide_461	050-9972627	guide461@trip.com	Extreme	South	24
 462	Guide_462	050-4322625	guide462@trip.com	Extreme	Center	1
-463	Guide_463	050-3194913	guide463@trip.com	Culinary	South	4
-464	Guide_464	050-8413077	guide464@trip.com	Culinary	Center	4
 465	Guide_465	050-4030622	guide465@trip.com	Extreme	Center	18
-466	Guide_466	050-2594290	guide466@trip.com	Culinary	South	27
 467	Guide_467	050-3114947	guide467@trip.com	History	Jerusalem	20
 468	Guide_468	050-3002635	guide468@trip.com	Culinary	North	11
-469	Guide_469	050-8015114	guide469@trip.com	Hiking	South	22
 470	Guide_470	050-6247033	guide470@trip.com	Hiking	South	16
-471	Guide_471	050-4165584	guide471@trip.com	History	North	29
-472	Guide_472	050-7654767	guide472@trip.com	Culinary	South	22
-473	Guide_473	050-5316456	guide473@trip.com	History	North	26
-474	Guide_474	050-2706524	guide474@trip.com	Extreme	South	11
-475	Guide_475	050-4592685	guide475@trip.com	Extreme	Jerusalem	26
 476	Guide_476	050-8815936	guide476@trip.com	Extreme	Jerusalem	3
-477	Guide_477	050-3574925	guide477@trip.com	Extreme	South	22
-478	Guide_478	050-2759714	guide478@trip.com	Culinary	South	15
 479	Guide_479	050-4561859	guide479@trip.com	Culinary	Jerusalem	2
 480	Guide_480	050-1442581	guide480@trip.com	History	Center	19
 481	Guide_481	050-9245451	guide481@trip.com	Culinary	Jerusalem	11
-482	Guide_482	050-6397499	guide482@trip.com	History	South	13
-483	Guide_483	050-9220485	guide483@trip.com	Hiking	Jerusalem	29
 484	Guide_484	050-2689738	guide484@trip.com	Hiking	Center	11
 485	Guide_485	050-2230925	guide485@trip.com	Culinary	Jerusalem	3
-486	Guide_486	050-5006229	guide486@trip.com	Extreme	North	11
-487	Guide_487	050-1102988	guide487@trip.com	Extreme	South	17
-488	Guide_488	050-3387023	guide488@trip.com	History	Center	25
 489	Guide_489	050-7741902	guide489@trip.com	Culinary	North	19
 490	Guide_490	050-2851867	guide490@trip.com	Hiking	Jerusalem	2
-491	Guide_491	050-9076698	guide491@trip.com	Culinary	South	20
 492	Guide_492	050-5262673	guide492@trip.com	Extreme	South	28
-493	Guide_493	050-4218613	guide493@trip.com	Hiking	South	18
-494	Guide_494	050-4960270	guide494@trip.com	Extreme	South	23
-495	Guide_495	050-7903222	guide495@trip.com	Culinary	South	29
-496	Guide_496	050-5825708	guide496@trip.com	History	Center	20
-497	Guide_497	050-9142281	guide497@trip.com	Extreme	North	29
 498	Guide_498	050-3273165	guide498@trip.com	Extreme	North	23
-499	Guide_499	050-3733194	guide499@trip.com	Culinary	South	22
 500	Guide_500	050-8402197	guide500@trip.com	History	Center	18
+2	Guide_2	050-8504531	guide2@trip.com	Senior Guide	Jerusalem	13
+3	Guide_3	050-2618557	guide3@trip.com	Senior Guide	Jerusalem	6
+4	Guide_4	050-9662559	guide4@trip.com	Senior Guide	Jerusalem	24
+6	Guide_6	050-7278036	guide6@trip.com	Senior Guide	Jerusalem	22
+8	Guide_8	050-4279774	guide8@trip.com	Senior Guide	Jerusalem	4
+9	Guide_9	050-8659647	guide9@trip.com	Senior Guide	South	16
+12	Guide_12	050-9624299	guide12@trip.com	Senior Guide	Jerusalem	18
+14	Guide_14	050-4012397	guide14@trip.com	Senior Guide	Center	17
+16	Guide_16	050-7234677	guide16@trip.com	Senior Guide	Center	22
+17	Guide_17	050-1940983	guide17@trip.com	Senior Guide	Jerusalem	11
+20	Guide_20	050-2024371	guide20@trip.com	Senior Guide	South	20
+22	Guide_22	050-5440778	guide22@trip.com	Senior Guide	Center	13
+23	Guide_23	050-7929133	guide23@trip.com	Senior Guide	Jerusalem	30
+25	Guide_25	050-1775080	guide25@trip.com	Senior Guide	North	3
+26	Guide_26	050-9102521	guide26@trip.com	Senior Guide	Jerusalem	5
+27	Guide_27	050-4055664	guide27@trip.com	Senior Guide	Jerusalem	4
+29	Guide_29	050-4934389	guide29@trip.com	Senior Guide	South	4
+30	Guide_30	050-9304357	guide30@trip.com	Senior Guide	Jerusalem	6
+31	Guide_31	050-4826319	guide31@trip.com	Senior Guide	North	23
+34	Guide_34	050-8693057	guide34@trip.com	Senior Guide	Jerusalem	26
+35	Guide_35	050-7425514	guide35@trip.com	Senior Guide	Jerusalem	27
+36	Guide_36	050-3224563	guide36@trip.com	Senior Guide	North	15
+37	Guide_37	050-9942400	guide37@trip.com	Senior Guide	Jerusalem	13
+38	Guide_38	050-2896148	guide38@trip.com	Senior Guide	South	25
+42	Guide_42	050-4605759	guide42@trip.com	Senior Guide	North	15
+43	Guide_43	050-2705849	guide43@trip.com	Senior Guide	North	21
+44	Guide_44	050-9093601	guide44@trip.com	Senior Guide	Center	29
+46	Guide_46	050-4151075	guide46@trip.com	Senior Guide	South	27
+47	Guide_47	050-4499672	guide47@trip.com	Senior Guide	Center	5
+48	Guide_48	050-4299375	guide48@trip.com	Senior Guide	Center	20
+50	Guide_50	050-1065406	guide50@trip.com	Senior Guide	South	28
+52	Guide_52	050-5661035	guide52@trip.com	Senior Guide	Center	27
+54	Guide_54	050-2117508	guide54@trip.com	Senior Guide	Jerusalem	6
+61	Guide_61	050-8950338	guide61@trip.com	Senior Guide	South	28
+63	Guide_63	050-4858907	guide63@trip.com	Senior Guide	Jerusalem	4
+66	Guide_66	050-5654811	guide66@trip.com	Senior Guide	North	8
+67	Guide_67	050-4232110	guide67@trip.com	Senior Guide	Center	27
+68	Guide_68	050-6026636	guide68@trip.com	Senior Guide	South	30
+69	Guide_69	050-1983913	guide69@trip.com	Senior Guide	South	10
+70	Guide_70	050-4873581	guide70@trip.com	Senior Guide	South	24
+71	Guide_71	050-3588540	guide71@trip.com	Senior Guide	Center	8
+73	Guide_73	050-5147858	guide73@trip.com	Senior Guide	Center	17
+74	Guide_74	050-4727872	guide74@trip.com	Senior Guide	South	24
+77	Guide_77	050-5339572	guide77@trip.com	Senior Guide	Jerusalem	6
+78	Guide_78	050-8418210	guide78@trip.com	Senior Guide	North	28
+79	Guide_79	050-2228121	guide79@trip.com	Senior Guide	North	11
+82	Guide_82	050-3976528	guide82@trip.com	Senior Guide	North	4
+83	Guide_83	050-1385786	guide83@trip.com	Senior Guide	Jerusalem	13
+84	Guide_84	050-8049698	guide84@trip.com	Senior Guide	Jerusalem	5
+85	Guide_85	050-3286545	guide85@trip.com	Senior Guide	Center	20
+86	Guide_86	050-1446643	guide86@trip.com	Senior Guide	North	15
+90	Guide_90	050-1607182	guide90@trip.com	Senior Guide	Center	11
+92	Guide_92	050-7660360	guide92@trip.com	Senior Guide	North	12
+93	Guide_93	050-5352415	guide93@trip.com	Senior Guide	North	11
+95	Guide_95	050-3026899	guide95@trip.com	Senior Guide	Jerusalem	4
+96	Guide_96	050-7057670	guide96@trip.com	Senior Guide	Center	21
+97	Guide_97	050-8776395	guide97@trip.com	Senior Guide	Jerusalem	18
+101	Guide_101	050-6069835	guide101@trip.com	Senior Guide	Jerusalem	9
+102	Guide_102	050-6568932	guide102@trip.com	Senior Guide	North	18
+105	Guide_105	050-2305983	guide105@trip.com	Senior Guide	South	28
+106	Guide_106	050-8772317	guide106@trip.com	Senior Guide	Center	21
+108	Guide_108	050-9930610	guide108@trip.com	Senior Guide	South	17
+111	Guide_111	050-8429364	guide111@trip.com	Senior Guide	North	7
+112	Guide_112	050-1368959	guide112@trip.com	Senior Guide	Center	14
+113	Guide_113	050-1668922	guide113@trip.com	Senior Guide	North	10
+117	Guide_117	050-8648888	guide117@trip.com	Senior Guide	South	14
+120	Guide_120	050-7340145	guide120@trip.com	Senior Guide	South	10
+121	Guide_121	050-8133901	guide121@trip.com	Senior Guide	South	29
+123	Guide_123	050-4923442	guide123@trip.com	Senior Guide	Center	28
+124	Guide_124	050-2609057	guide124@trip.com	Senior Guide	Center	6
+125	Guide_125	050-4343935	guide125@trip.com	Senior Guide	Jerusalem	18
+126	Guide_126	050-5504055	guide126@trip.com	Senior Guide	Center	9
+127	Guide_127	050-8542014	guide127@trip.com	Senior Guide	Center	7
+130	Guide_130	050-5681367	guide130@trip.com	Senior Guide	South	8
+131	Guide_131	050-4909210	guide131@trip.com	Senior Guide	Jerusalem	12
+132	Guide_132	050-3978211	guide132@trip.com	Senior Guide	South	28
+135	Guide_135	050-9024429	guide135@trip.com	Senior Guide	Center	27
+137	Guide_137	050-8346489	guide137@trip.com	Senior Guide	Center	3
+138	Guide_138	050-2678064	guide138@trip.com	Senior Guide	Center	5
+141	Guide_141	050-4111220	guide141@trip.com	Senior Guide	Jerusalem	27
+142	Guide_142	050-3296874	guide142@trip.com	Senior Guide	Jerusalem	22
+143	Guide_143	050-5308234	guide143@trip.com	Senior Guide	North	29
+144	Guide_144	050-8463789	guide144@trip.com	Senior Guide	Center	14
+147	Guide_147	050-5905939	guide147@trip.com	Senior Guide	North	14
+149	Guide_149	050-5843391	guide149@trip.com	Senior Guide	South	26
+150	Guide_150	050-7412391	guide150@trip.com	Senior Guide	Jerusalem	26
+153	Guide_153	050-3047605	guide153@trip.com	Senior Guide	Jerusalem	12
+154	Guide_154	050-2369259	guide154@trip.com	Senior Guide	South	7
+155	Guide_155	050-1095635	guide155@trip.com	Senior Guide	South	24
+156	Guide_156	050-5611948	guide156@trip.com	Senior Guide	Center	28
+157	Guide_157	050-7475162	guide157@trip.com	Senior Guide	South	16
+158	Guide_158	050-1379377	guide158@trip.com	Senior Guide	South	24
+165	Guide_165	050-9306765	guide165@trip.com	Senior Guide	Jerusalem	21
+169	Guide_169	050-4175413	guide169@trip.com	Senior Guide	Center	7
+171	Guide_171	050-2336022	guide171@trip.com	Senior Guide	North	10
+174	Guide_174	050-9671924	guide174@trip.com	Senior Guide	Center	19
+175	Guide_175	050-7961963	guide175@trip.com	Senior Guide	South	23
+178	Guide_178	050-8296641	guide178@trip.com	Senior Guide	Center	18
+182	Guide_182	050-1022073	guide182@trip.com	Senior Guide	Center	15
+183	Guide_183	050-9238477	guide183@trip.com	Senior Guide	South	14
+184	Guide_184	050-3187626	guide184@trip.com	Senior Guide	North	24
+186	Guide_186	050-4141773	guide186@trip.com	Senior Guide	Center	5
+188	Guide_188	050-5365615	guide188@trip.com	Senior Guide	Center	7
+189	Guide_189	050-4821572	guide189@trip.com	Senior Guide	Jerusalem	7
+190	Guide_190	050-7539445	guide190@trip.com	Senior Guide	Jerusalem	20
+191	Guide_191	050-5206805	guide191@trip.com	Senior Guide	North	16
+195	Guide_195	050-7676946	guide195@trip.com	Senior Guide	South	27
+197	Guide_197	050-2163867	guide197@trip.com	Senior Guide	Jerusalem	20
+201	Guide_201	050-6555975	guide201@trip.com	Senior Guide	South	10
+202	Guide_202	050-3273317	guide202@trip.com	Senior Guide	Center	17
+203	Guide_203	050-6634814	guide203@trip.com	Senior Guide	Jerusalem	20
+206	Guide_206	050-8425383	guide206@trip.com	Senior Guide	Center	16
+207	Guide_207	050-1724791	guide207@trip.com	Senior Guide	South	19
+210	Guide_210	050-2338945	guide210@trip.com	Senior Guide	North	8
+211	Guide_211	050-9028943	guide211@trip.com	Senior Guide	Jerusalem	30
+212	Guide_212	050-4031903	guide212@trip.com	Senior Guide	South	26
+213	Guide_213	050-3429096	guide213@trip.com	Senior Guide	South	16
+214	Guide_214	050-4168147	guide214@trip.com	Senior Guide	Center	11
+215	Guide_215	050-6219847	guide215@trip.com	Senior Guide	Center	22
+216	Guide_216	050-9208558	guide216@trip.com	Senior Guide	North	17
+217	Guide_217	050-9762814	guide217@trip.com	Senior Guide	Jerusalem	9
+220	Guide_220	050-5952564	guide220@trip.com	Senior Guide	South	12
+221	Guide_221	050-6744519	guide221@trip.com	Senior Guide	South	5
+222	Guide_222	050-4005356	guide222@trip.com	Senior Guide	Center	9
+224	Guide_224	050-7431821	guide224@trip.com	Senior Guide	Jerusalem	13
+226	Guide_226	050-2483194	guide226@trip.com	Senior Guide	Center	22
+227	Guide_227	050-5982370	guide227@trip.com	Senior Guide	Center	22
+228	Guide_228	050-2350799	guide228@trip.com	Senior Guide	South	15
+232	Guide_232	050-9658460	guide232@trip.com	Senior Guide	North	29
+233	Guide_233	050-9895031	guide233@trip.com	Senior Guide	North	18
+236	Guide_236	050-1228728	guide236@trip.com	Senior Guide	Jerusalem	30
+237	Guide_237	050-2946444	guide237@trip.com	Senior Guide	Center	26
+238	Guide_238	050-7135552	guide238@trip.com	Senior Guide	North	9
+239	Guide_239	050-1618536	guide239@trip.com	Senior Guide	Jerusalem	9
+242	Guide_242	050-8657950	guide242@trip.com	Senior Guide	Center	12
+248	Guide_248	050-1316414	guide248@trip.com	Senior Guide	South	17
+251	Guide_251	050-4084091	guide251@trip.com	Senior Guide	South	26
+253	Guide_253	050-5546518	guide253@trip.com	Senior Guide	Jerusalem	8
+256	Guide_256	050-9012585	guide256@trip.com	Senior Guide	North	15
+258	Guide_258	050-9746910	guide258@trip.com	Senior Guide	South	28
+259	Guide_259	050-8475941	guide259@trip.com	Senior Guide	Jerusalem	29
+260	Guide_260	050-2537573	guide260@trip.com	Senior Guide	Jerusalem	15
+261	Guide_261	050-2665788	guide261@trip.com	Senior Guide	North	29
+262	Guide_262	050-6388400	guide262@trip.com	Senior Guide	South	4
+263	Guide_263	050-3213913	guide263@trip.com	Senior Guide	Jerusalem	29
+264	Guide_264	050-8986349	guide264@trip.com	Senior Guide	Center	25
+265	Guide_265	050-1695143	guide265@trip.com	Senior Guide	South	25
+269	Guide_269	050-5213034	guide269@trip.com	Senior Guide	Center	19
+270	Guide_270	050-7388259	guide270@trip.com	Senior Guide	South	15
+271	Guide_271	050-6941374	guide271@trip.com	Senior Guide	Jerusalem	29
+272	Guide_272	050-9712890	guide272@trip.com	Senior Guide	North	20
+273	Guide_273	050-6433454	guide273@trip.com	Senior Guide	Jerusalem	14
+274	Guide_274	050-4619001	guide274@trip.com	Senior Guide	North	30
+277	Guide_277	050-5604490	guide277@trip.com	Senior Guide	Jerusalem	4
+279	Guide_279	050-3486715	guide279@trip.com	Senior Guide	Center	30
+280	Guide_280	050-6987249	guide280@trip.com	Senior Guide	Jerusalem	18
+281	Guide_281	050-3883728	guide281@trip.com	Senior Guide	Jerusalem	6
+282	Guide_282	050-6023942	guide282@trip.com	Senior Guide	South	29
+284	Guide_284	050-9578395	guide284@trip.com	Senior Guide	North	15
+285	Guide_285	050-4277844	guide285@trip.com	Senior Guide	Center	15
+286	Guide_286	050-9238891	guide286@trip.com	Senior Guide	Jerusalem	7
+287	Guide_287	050-7370944	guide287@trip.com	Senior Guide	Jerusalem	19
+289	Guide_289	050-1636011	guide289@trip.com	Senior Guide	Center	14
+290	Guide_290	050-8790161	guide290@trip.com	Senior Guide	Jerusalem	11
+291	Guide_291	050-6289029	guide291@trip.com	Senior Guide	North	14
+293	Guide_293	050-5024131	guide293@trip.com	Senior Guide	South	23
+295	Guide_295	050-6274575	guide295@trip.com	Senior Guide	North	26
+297	Guide_297	050-8754755	guide297@trip.com	Senior Guide	Center	24
+298	Guide_298	050-9699250	guide298@trip.com	Senior Guide	South	8
+299	Guide_299	050-5936022	guide299@trip.com	Senior Guide	North	30
+301	Guide_301	050-6607320	guide301@trip.com	Senior Guide	North	9
+302	Guide_302	050-8573113	guide302@trip.com	Senior Guide	Center	22
+304	Guide_304	050-5588749	guide304@trip.com	Senior Guide	South	11
+305	Guide_305	050-6042642	guide305@trip.com	Senior Guide	South	12
+306	Guide_306	050-8380017	guide306@trip.com	Senior Guide	Jerusalem	30
+308	Guide_308	050-7189717	guide308@trip.com	Senior Guide	Jerusalem	20
+314	Guide_314	050-8372201	guide314@trip.com	Senior Guide	Jerusalem	24
+315	Guide_315	050-3983346	guide315@trip.com	Senior Guide	Jerusalem	11
+316	Guide_316	050-3201848	guide316@trip.com	Senior Guide	North	18
+317	Guide_317	050-1225797	guide317@trip.com	Senior Guide	Jerusalem	26
+318	Guide_318	050-9846167	guide318@trip.com	Senior Guide	North	4
+319	Guide_319	050-5366635	guide319@trip.com	Senior Guide	Center	28
+320	Guide_320	050-8472369	guide320@trip.com	Senior Guide	South	3
+321	Guide_321	050-2740337	guide321@trip.com	Senior Guide	Center	6
+323	Guide_323	050-7574910	guide323@trip.com	Senior Guide	Jerusalem	20
+327	Guide_327	050-3848784	guide327@trip.com	Senior Guide	Jerusalem	15
+328	Guide_328	050-9376820	guide328@trip.com	Senior Guide	North	28
+333	Guide_333	050-5144022	guide333@trip.com	Senior Guide	North	13
+336	Guide_336	050-6658950	guide336@trip.com	Senior Guide	South	14
+337	Guide_337	050-8620364	guide337@trip.com	Senior Guide	North	25
+341	Guide_341	050-7615041	guide341@trip.com	Senior Guide	South	30
+346	Guide_346	050-8148927	guide346@trip.com	Senior Guide	North	23
+347	Guide_347	050-4919764	guide347@trip.com	Senior Guide	North	25
+348	Guide_348	050-3187807	guide348@trip.com	Senior Guide	South	5
+349	Guide_349	050-7361150	guide349@trip.com	Senior Guide	Center	7
+351	Guide_351	050-8491816	guide351@trip.com	Senior Guide	Center	6
+352	Guide_352	050-4903142	guide352@trip.com	Senior Guide	Jerusalem	23
+353	Guide_353	050-7334932	guide353@trip.com	Senior Guide	Jerusalem	24
+354	Guide_354	050-1391501	guide354@trip.com	Senior Guide	Center	12
+356	Guide_356	050-6373921	guide356@trip.com	Senior Guide	North	16
+364	Guide_364	050-3157610	guide364@trip.com	Senior Guide	Center	17
+365	Guide_365	050-7951392	guide365@trip.com	Senior Guide	South	21
+366	Guide_366	050-5173100	guide366@trip.com	Senior Guide	North	20
+367	Guide_367	050-8906132	guide367@trip.com	Senior Guide	Center	22
+368	Guide_368	050-7696670	guide368@trip.com	Senior Guide	South	15
+370	Guide_370	050-1383375	guide370@trip.com	Senior Guide	South	10
+371	Guide_371	050-7991174	guide371@trip.com	Senior Guide	South	15
+373	Guide_373	050-4737960	guide373@trip.com	Senior Guide	Center	28
+374	Guide_374	050-5055501	guide374@trip.com	Senior Guide	North	29
+376	Guide_376	050-4501876	guide376@trip.com	Senior Guide	North	21
+377	Guide_377	050-7597367	guide377@trip.com	Senior Guide	South	18
+378	Guide_378	050-7339102	guide378@trip.com	Senior Guide	South	19
+379	Guide_379	050-3282345	guide379@trip.com	Senior Guide	Center	12
+380	Guide_380	050-6871243	guide380@trip.com	Senior Guide	North	27
+381	Guide_381	050-3100247	guide381@trip.com	Senior Guide	North	28
+382	Guide_382	050-2481192	guide382@trip.com	Senior Guide	Jerusalem	21
+383	Guide_383	050-6579679	guide383@trip.com	Senior Guide	North	18
+384	Guide_384	050-4252745	guide384@trip.com	Senior Guide	North	16
+385	Guide_385	050-6651680	guide385@trip.com	Senior Guide	Center	5
+386	Guide_386	050-7868352	guide386@trip.com	Senior Guide	South	19
+387	Guide_387	050-1593760	guide387@trip.com	Senior Guide	Center	22
+388	Guide_388	050-8299084	guide388@trip.com	Senior Guide	North	19
+389	Guide_389	050-3176449	guide389@trip.com	Senior Guide	North	16
+391	Guide_391	050-6048463	guide391@trip.com	Senior Guide	South	27
+392	Guide_392	050-5597685	guide392@trip.com	Senior Guide	Center	19
+394	Guide_394	050-2214505	guide394@trip.com	Senior Guide	South	29
+399	Guide_399	050-3387263	guide399@trip.com	Senior Guide	Center	22
+400	Guide_400	050-6188155	guide400@trip.com	Senior Guide	Center	21
+402	Guide_402	050-3296779	guide402@trip.com	Senior Guide	Center	25
+404	Guide_404	050-7229013	guide404@trip.com	Senior Guide	Jerusalem	23
+405	Guide_405	050-6041912	guide405@trip.com	Senior Guide	Center	26
+406	Guide_406	050-9386845	guide406@trip.com	Senior Guide	Center	23
+408	Guide_408	050-6960874	guide408@trip.com	Senior Guide	Jerusalem	27
+411	Guide_411	050-5503545	guide411@trip.com	Senior Guide	Jerusalem	19
+412	Guide_412	050-1384387	guide412@trip.com	Senior Guide	Jerusalem	11
+415	Guide_415	050-7843879	guide415@trip.com	Senior Guide	Jerusalem	5
+416	Guide_416	050-4106614	guide416@trip.com	Senior Guide	Center	19
+419	Guide_419	050-6323302	guide419@trip.com	Senior Guide	Jerusalem	26
+420	Guide_420	050-1053809	guide420@trip.com	Senior Guide	South	29
+421	Guide_421	050-3395967	guide421@trip.com	Senior Guide	South	30
+422	Guide_422	050-8426816	guide422@trip.com	Senior Guide	Jerusalem	8
+424	Guide_424	050-6748263	guide424@trip.com	Senior Guide	Jerusalem	20
+425	Guide_425	050-7805841	guide425@trip.com	Senior Guide	North	17
+427	Guide_427	050-4231990	guide427@trip.com	Senior Guide	North	8
+430	Guide_430	050-6595139	guide430@trip.com	Senior Guide	South	9
+431	Guide_431	050-2592083	guide431@trip.com	Senior Guide	South	26
+432	Guide_432	050-1511128	guide432@trip.com	Senior Guide	South	23
+433	Guide_433	050-3430793	guide433@trip.com	Senior Guide	Center	8
+434	Guide_434	050-3921715	guide434@trip.com	Senior Guide	South	6
+435	Guide_435	050-1995469	guide435@trip.com	Senior Guide	North	10
+436	Guide_436	050-9777866	guide436@trip.com	Senior Guide	Center	8
+437	Guide_437	050-8594006	guide437@trip.com	Senior Guide	Center	18
+439	Guide_439	050-2097659	guide439@trip.com	Senior Guide	South	29
+440	Guide_440	050-5888063	guide440@trip.com	Senior Guide	Jerusalem	9
+443	Guide_443	050-1350457	guide443@trip.com	Senior Guide	South	20
+444	Guide_444	050-8397050	guide444@trip.com	Senior Guide	Jerusalem	15
+445	Guide_445	050-3700683	guide445@trip.com	Senior Guide	Jerusalem	18
+446	Guide_446	050-2481721	guide446@trip.com	Senior Guide	Center	13
+447	Guide_447	050-8539589	guide447@trip.com	Senior Guide	South	13
+449	Guide_449	050-5679441	guide449@trip.com	Senior Guide	South	13
+451	Guide_451	050-2535798	guide451@trip.com	Senior Guide	Center	29
+453	Guide_453	050-1356682	guide453@trip.com	Senior Guide	South	9
+454	Guide_454	050-4894794	guide454@trip.com	Senior Guide	South	6
+457	Guide_457	050-3750714	guide457@trip.com	Senior Guide	Jerusalem	8
+458	Guide_458	050-9142147	guide458@trip.com	Senior Guide	South	24
+459	Guide_459	050-3087533	guide459@trip.com	Senior Guide	Jerusalem	25
+460	Guide_460	050-2523703	guide460@trip.com	Senior Guide	Center	23
+461	Guide_461	050-9972627	guide461@trip.com	Senior Guide	South	24
+463	Guide_463	050-3194913	guide463@trip.com	Senior Guide	South	4
+464	Guide_464	050-8413077	guide464@trip.com	Senior Guide	Center	4
+466	Guide_466	050-2594290	guide466@trip.com	Senior Guide	South	27
+469	Guide_469	050-8015114	guide469@trip.com	Senior Guide	South	22
+471	Guide_471	050-4165584	guide471@trip.com	Senior Guide	North	29
+472	Guide_472	050-7654767	guide472@trip.com	Senior Guide	South	22
+473	Guide_473	050-5316456	guide473@trip.com	Senior Guide	North	26
+474	Guide_474	050-2706524	guide474@trip.com	Senior Guide	South	11
+475	Guide_475	050-4592685	guide475@trip.com	Senior Guide	Jerusalem	26
+477	Guide_477	050-3574925	guide477@trip.com	Senior Guide	South	22
+478	Guide_478	050-2759714	guide478@trip.com	Senior Guide	South	15
+482	Guide_482	050-6397499	guide482@trip.com	Senior Guide	South	13
+483	Guide_483	050-9220485	guide483@trip.com	Senior Guide	Jerusalem	29
+486	Guide_486	050-5006229	guide486@trip.com	Senior Guide	North	11
+487	Guide_487	050-1102988	guide487@trip.com	Senior Guide	South	17
+488	Guide_488	050-3387023	guide488@trip.com	Senior Guide	Center	25
+491	Guide_491	050-9076698	guide491@trip.com	Senior Guide	South	20
+493	Guide_493	050-4218613	guide493@trip.com	Senior Guide	South	18
+494	Guide_494	050-4960270	guide494@trip.com	Senior Guide	South	23
+495	Guide_495	050-7903222	guide495@trip.com	Senior Guide	South	29
+496	Guide_496	050-5825708	guide496@trip.com	Senior Guide	Center	20
+497	Guide_497	050-9142281	guide497@trip.com	Senior Guide	North	29
+499	Guide_499	050-3733194	guide499@trip.com	Senior Guide	South	22
 \.
 
 
@@ -43235,7 +43201,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 28	492
 29	277
 30	416
-31	7
 32	25
 33	468
 34	29
@@ -44300,7 +44265,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 1093	153
 1094	362
 1095	52
-1096	7
 1097	347
 1098	184
 1099	134
@@ -44602,7 +44566,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 1395	20
 1396	326
 1397	285
-1398	7
 1399	486
 1400	222
 1401	397
@@ -45596,7 +45559,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 2389	308
 2390	494
 2391	112
-2392	7
 2393	41
 2394	424
 2395	437
@@ -46494,7 +46456,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 3287	21
 3288	217
 3289	59
-3290	7
 3291	449
 3292	239
 3293	410
@@ -47161,7 +47122,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 3954	352
 3955	73
 3956	468
-3957	7
 3958	26
 3959	493
 3960	165
@@ -47683,7 +47643,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 4476	119
 4477	392
 4478	316
-4479	7
 4480	165
 4481	439
 4482	266
@@ -49154,7 +49113,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 5947	79
 5948	122
 5949	174
-5950	7
 5951	209
 5952	434
 5953	226
@@ -50009,7 +49967,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 6802	359
 6803	428
 6804	352
-6805	7
 6806	128
 6807	412
 6808	152
@@ -50441,7 +50398,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 7234	297
 7235	122
 7236	111
-7237	7
 7238	328
 7239	133
 7240	111
@@ -51201,7 +51157,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 7994	214
 7995	312
 7996	237
-7997	7
 7998	268
 7999	6
 8000	294
@@ -51300,7 +51255,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 8093	259
 8094	133
 8095	163
-8096	7
 8097	434
 8098	368
 8099	436
@@ -51891,7 +51845,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 8684	92
 8685	5
 8686	260
-8687	7
 8688	375
 8689	255
 8690	306
@@ -52061,7 +52014,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 8854	400
 8855	150
 8856	126
-8857	7
 8858	323
 8859	406
 8860	219
@@ -53189,7 +53141,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 9982	369
 9983	297
 9984	118
-9985	7
 9986	135
 9987	309
 9988	32
@@ -53246,7 +53197,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 10039	87
 10040	273
 10041	50
-10042	7
 10043	45
 10044	493
 10045	301
@@ -53740,7 +53690,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 10533	284
 10534	463
 10535	138
-10536	7
 10537	212
 10538	417
 10539	428
@@ -54373,7 +54322,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 11166	207
 11167	51
 11168	449
-11169	7
 11170	95
 11171	306
 11172	58
@@ -54425,7 +54373,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 11218	447
 11219	257
 11220	42
-11221	7
 11222	249
 11223	335
 11224	226
@@ -55879,7 +55826,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 12672	499
 12673	444
 12674	131
-12675	7
 12676	317
 12677	151
 12678	189
@@ -55945,7 +55891,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 12738	5
 12739	111
 12740	338
-12741	7
 12742	366
 12743	318
 12744	249
@@ -56143,7 +56088,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 12936	324
 12937	153
 12938	372
-12939	7
 12940	466
 12941	308
 12942	66
@@ -57669,7 +57613,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 14462	286
 14463	66
 14464	162
-14465	7
 14466	292
 14467	225
 14468	229
@@ -57681,7 +57624,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 14474	8
 14475	264
 14476	56
-14477	7
 14478	495
 14479	302
 14480	369
@@ -59098,7 +59040,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 15891	397
 15892	204
 15893	444
-15894	7
 15895	213
 15896	237
 15897	491
@@ -60432,7 +60373,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 17225	477
 17226	25
 17227	383
-17228	7
 17229	483
 17230	395
 17231	484
@@ -60466,7 +60406,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 17259	59
 17260	156
 17261	393
-17262	7
 17263	394
 17264	286
 17265	328
@@ -60542,7 +60481,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 17335	250
 17336	16
 17337	13
-17338	7
 17339	30
 17340	121
 17341	476
@@ -60558,7 +60496,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 17351	429
 17352	312
 17353	57
-17354	7
 17355	86
 17356	306
 17357	182
@@ -60606,7 +60543,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 17399	173
 17400	259
 17401	338
-17402	7
 17403	370
 17404	414
 17405	233
@@ -60970,7 +60906,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 17763	160
 17764	408
 17765	410
-17766	7
 17767	261
 17768	463
 17769	435
@@ -61083,7 +61018,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 17876	231
 17877	458
 17878	190
-17879	7
 17880	96
 17881	340
 17882	137
@@ -62542,7 +62476,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 19335	62
 19336	494
 19337	384
-19338	7
 19339	363
 19340	219
 19341	328
@@ -62724,7 +62657,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 19517	405
 19518	269
 19519	341
-19520	7
 19521	488
 19522	315
 19523	439
@@ -63116,7 +63048,6 @@ COPY public.participantgroup (participantid, groupid) FROM stdin;
 19909	186
 19910	98
 19911	117
-19912	7
 19913	143
 19914	214
 19915	189
@@ -63250,7 +63181,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 33	Trip_Plan_33	2026-06-20	2026-06-21	Overnight	488
 34	Trip_Plan_34	2026-02-01	2026-02-06	Day Trip	314
 35	Trip_Plan_35	2026-01-09	2026-01-11	Day Trip	483
-36	Trip_Plan_36	2026-05-19	2026-05-22	Overnight	42
 37	Trip_Plan_37	2026-03-20	2026-03-21	Day Trip	256
 38	Trip_Plan_38	2026-02-06	2026-02-11	Overnight	128
 39	Trip_Plan_39	2026-01-28	2026-01-31	Overnight	379
@@ -63269,7 +63199,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 52	Trip_Plan_52	2026-05-21	2026-05-23	Day Trip	494
 53	Trip_Plan_53	2026-01-20	2026-01-21	Overnight	374
 54	Trip_Plan_54	2026-01-07	2026-01-11	Overnight	43
-55	Trip_Plan_55	2026-06-13	2026-06-18	Day Trip	222
 56	Trip_Plan_56	2026-05-21	2026-05-23	Day Trip	256
 57	Trip_Plan_57	2026-03-20	2026-03-22	Day Trip	99
 58	Trip_Plan_58	2026-05-27	2026-05-30	Overnight	20
@@ -63292,7 +63221,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 75	Trip_Plan_75	2026-02-04	2026-02-06	Day Trip	388
 76	Trip_Plan_76	2026-01-25	2026-01-29	Overnight	29
 77	Trip_Plan_77	2026-02-12	2026-02-14	Day Trip	2
-78	Trip_Plan_78	2026-05-27	2026-05-31	Day Trip	171
 79	Trip_Plan_79	2026-03-27	2026-03-29	Day Trip	216
 80	Trip_Plan_80	2026-01-20	2026-01-23	Day Trip	446
 81	Trip_Plan_81	2026-05-11	2026-05-14	Overnight	48
@@ -63349,7 +63277,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 132	Trip_Plan_132	2026-01-22	2026-01-24	Overnight	228
 133	Trip_Plan_133	2026-04-20	2026-04-25	Day Trip	466
 134	Trip_Plan_134	2026-02-15	2026-02-16	Overnight	354
-135	Trip_Plan_135	2026-06-03	2026-06-08	Overnight	97
 136	Trip_Plan_136	2026-03-17	2026-03-22	Day Trip	147
 137	Trip_Plan_137	2026-03-15	2026-03-18	Day Trip	44
 138	Trip_Plan_138	2026-01-13	2026-01-14	Day Trip	486
@@ -63399,7 +63326,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 182	Trip_Plan_182	2026-02-11	2026-02-12	Overnight	226
 183	Trip_Plan_183	2026-01-13	2026-01-18	Overnight	449
 184	Trip_Plan_184	2026-02-20	2026-02-22	Overnight	449
-185	Trip_Plan_185	2026-06-20	2026-06-21	Overnight	81
 186	Trip_Plan_186	2026-05-16	2026-05-17	Day Trip	293
 187	Trip_Plan_187	2026-01-25	2026-01-29	Day Trip	365
 188	Trip_Plan_188	2026-01-05	2026-01-07	Day Trip	462
@@ -63471,8 +63397,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 254	Trip_Plan_254	2026-01-05	2026-01-09	Overnight	82
 255	Trip_Plan_255	2026-03-26	2026-03-31	Overnight	377
 256	Trip_Plan_256	2026-03-28	2026-04-01	Overnight	165
-257	Trip_Plan_257	2026-05-22	2026-05-27	Overnight	259
-258	Trip_Plan_258	2026-06-28	2026-07-01	Overnight	141
 259	Trip_Plan_259	2026-04-17	2026-04-22	Overnight	212
 260	Trip_Plan_260	2026-04-19	2026-04-22	Day Trip	43
 261	Trip_Plan_261	2026-04-10	2026-04-12	Overnight	169
@@ -63509,7 +63433,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 292	Trip_Plan_292	2026-01-18	2026-01-21	Overnight	106
 293	Trip_Plan_293	2026-03-22	2026-03-26	Day Trip	400
 294	Trip_Plan_294	2026-03-02	2026-03-03	Day Trip	128
-295	Trip_Plan_295	2026-05-17	2026-05-21	Overnight	219
 296	Trip_Plan_296	2026-01-04	2026-01-05	Day Trip	376
 297	Trip_Plan_297	2026-03-18	2026-03-21	Day Trip	84
 298	Trip_Plan_298	2026-04-03	2026-04-06	Day Trip	416
@@ -63521,7 +63444,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 304	Trip_Plan_304	2026-03-05	2026-03-10	Overnight	1
 305	Trip_Plan_305	2026-01-04	2026-01-09	Day Trip	432
 306	Trip_Plan_306	2026-01-07	2026-01-10	Day Trip	353
-307	Trip_Plan_307	2026-06-06	2026-06-09	Overnight	16
 308	Trip_Plan_308	2026-06-28	2026-06-30	Overnight	303
 309	Trip_Plan_309	2026-04-04	2026-04-08	Day Trip	157
 310	Trip_Plan_310	2026-06-20	2026-06-21	Overnight	223
@@ -63533,10 +63455,10 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 316	Trip_Plan_316	2026-02-22	2026-02-23	Day Trip	130
 317	Trip_Plan_317	2026-04-04	2026-04-05	Overnight	419
 318	Trip_Plan_318	2026-03-02	2026-03-06	Overnight	411
-319	Trip_Plan_319	2026-03-13	2026-03-16	Day Trip	119
 320	Trip_Plan_320	2026-03-11	2026-03-14	Day Trip	128
 321	Trip_Plan_321	2026-01-26	2026-01-29	Day Trip	436
 322	Trip_Plan_322	2026-05-04	2026-05-08	Overnight	264
+257	Trip_Plan_257	2026-05-22	2026-05-27	Sold Out	259
 323	Trip_Plan_323	2026-01-06	2026-01-11	Overnight	197
 324	Trip_Plan_324	2026-04-05	2026-04-08	Day Trip	472
 325	Trip_Plan_325	2026-01-23	2026-01-28	Overnight	336
@@ -63562,10 +63484,8 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 345	Trip_Plan_345	2026-06-14	2026-06-16	Overnight	321
 346	Trip_Plan_346	2026-05-27	2026-06-01	Overnight	38
 347	Trip_Plan_347	2026-03-14	2026-03-17	Day Trip	73
-348	Trip_Plan_348	2026-05-23	2026-05-24	Day Trip	469
 349	Trip_Plan_349	2026-03-16	2026-03-18	Day Trip	284
 350	Trip_Plan_350	2026-05-20	2026-05-24	Day Trip	269
-351	Trip_Plan_351	2026-01-19	2026-01-21	Overnight	119
 352	Trip_Plan_352	2026-04-07	2026-04-10	Overnight	113
 353	Trip_Plan_353	2026-01-25	2026-01-26	Day Trip	216
 354	Trip_Plan_354	2026-06-01	2026-06-06	Overnight	233
@@ -63576,7 +63496,6 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 359	Trip_Plan_359	2026-02-25	2026-03-02	Overnight	314
 360	Trip_Plan_360	2026-05-23	2026-05-25	Overnight	181
 361	Trip_Plan_361	2026-05-07	2026-05-10	Overnight	82
-362	Trip_Plan_362	2026-05-17	2026-05-21	Overnight	220
 363	Trip_Plan_363	2026-03-15	2026-03-16	Overnight	499
 364	Trip_Plan_364	2026-03-20	2026-03-21	Day Trip	434
 365	Trip_Plan_365	2026-05-23	2026-05-26	Day Trip	120
@@ -63592,11 +63511,9 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 375	Trip_Plan_375	2026-06-27	2026-07-01	Day Trip	255
 376	Trip_Plan_376	2026-01-13	2026-01-14	Overnight	391
 377	Trip_Plan_377	2026-06-23	2026-06-26	Overnight	85
-378	Trip_Plan_378	2026-06-21	2026-06-24	Day Trip	385
 379	Trip_Plan_379	2026-04-16	2026-04-17	Day Trip	378
 380	Trip_Plan_380	2026-04-18	2026-04-21	Overnight	405
 381	Trip_Plan_381	2026-05-18	2026-05-23	Overnight	30
-382	Trip_Plan_382	2026-06-20	2026-06-24	Overnight	479
 383	Trip_Plan_383	2026-03-14	2026-03-18	Overnight	68
 384	Trip_Plan_384	2026-03-17	2026-03-21	Overnight	446
 385	Trip_Plan_385	2026-02-24	2026-03-01	Overnight	265
@@ -63644,6 +63561,7 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 427	Trip_Plan_427	2026-02-19	2026-02-23	Overnight	203
 428	Trip_Plan_428	2026-04-07	2026-04-08	Overnight	456
 429	Trip_Plan_429	2026-03-17	2026-03-19	Day Trip	37
+348	Trip_Plan_348	2026-05-23	2026-05-24	Sold Out	469
 430	Trip_Plan_430	2026-06-16	2026-06-17	Day Trip	210
 431	Trip_Plan_431	2026-02-09	2026-02-14	Day Trip	211
 432	Trip_Plan_432	2026-03-20	2026-03-22	Day Trip	188
@@ -63710,11 +63628,24 @@ COPY public.trip (tripid, tripname, startdate, enddate, triptype, guideid) FROM 
 493	Trip_Plan_493	2026-04-11	2026-04-13	Day Trip	342
 494	Trip_Plan_494	2026-02-10	2026-02-15	Day Trip	453
 495	Trip_Plan_495	2026-02-06	2026-02-08	Overnight	463
-496	Trip_Plan_496	2026-05-05	2026-05-06	Day Trip	383
 497	Trip_Plan_497	2026-04-01	2026-04-06	Overnight	258
 498	Trip_Plan_498	2026-06-22	2026-06-27	Day Trip	69
 499	Trip_Plan_499	2026-05-21	2026-05-22	Overnight	8
 500	Trip_Plan_500	2026-04-09	2026-04-10	Overnight	315
+319	Trip_Plan_319	2026-03-13	2026-03-16	Day Trip	1
+351	Trip_Plan_351	2026-01-19	2026-01-21	Overnight	1
+36	Trip_Plan_36	2026-05-19	2026-05-22	Sold Out	42
+55	Trip_Plan_55	2026-06-13	2026-06-18	Sold Out	222
+78	Trip_Plan_78	2026-05-27	2026-05-31	Sold Out	171
+135	Trip_Plan_135	2026-06-03	2026-06-08	Sold Out	97
+185	Trip_Plan_185	2026-06-20	2026-06-21	Sold Out	81
+258	Trip_Plan_258	2026-06-28	2026-07-01	Sold Out	141
+295	Trip_Plan_295	2026-05-17	2026-05-21	Sold Out	219
+307	Trip_Plan_307	2026-06-06	2026-06-09	Sold Out	16
+362	Trip_Plan_362	2026-05-17	2026-05-21	Sold Out	220
+378	Trip_Plan_378	2026-06-21	2026-06-24	Sold Out	385
+382	Trip_Plan_382	2026-06-20	2026-06-24	Sold Out	479
+496	Trip_Plan_496	2026-05-05	2026-05-06	Sold Out	383
 \.
 
 
@@ -63979,11 +63910,11 @@ ALTER TABLE ONLY public.trip
     ADD CONSTRAINT trip_guideid_fkey FOREIGN KEY (guideid) REFERENCES public.guide(guideid);
 
 
--- Completed on 2026-05-04 11:16:20 UTC
+-- Completed on 2026-05-05 02:04:42 UTC
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict RRtlu0mlQG4fXR3I77EpXUNRyNLdE7ltKIqjLjrxmfWBFMYoUjjX0VQ8J4YciTE
+\unrestrict cepydLpERmB9ngT6zt1IeXI70ku6GEHbIRBk6x5wlDTbRN5SbtokpcCzmr5pYW2
 
