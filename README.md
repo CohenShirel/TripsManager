@@ -11,7 +11,8 @@
   * [SQL Scripts](#scripts)
   * [Data](#data)
   * [Backup](#backup)
-* [Phase 2: Integration](#phase-2)
+* [Phase 2: Queries](#phase-2)
+* [Phase 3: Integration](#phase-3)
 
 ## Phase 1: Design and Build the Database <a name="phase-1"></a>
 
@@ -110,7 +111,7 @@ We verified the backup by performing a full restore into a clean environment:
 *Confirmation that the system was able to reconstruct the database from the backup file.*  
 ![Restore Success Message](./images/restore_screenshot.jpg)
 
-## Phase 2: Querying, Optimization, and Data Control
+## Phase 2: Querying, Optimization, and Data Control <a name="phase-2"></a>
 
 In this phase of the project, we focused on advanced, hands-on operations with our database. We executed complex `SELECT` queries, which included performance analysis and comparing the efficiency of different query structures. We also performed conditional `UPDATE` and `DELETE` operations while strictly maintaining Referential Integrity.
 
@@ -118,3 +119,107 @@ Additionally, we enhanced the system's reliability by implementing Constraints t
 All SQL files for this phase, along with the updated backup file (`backup2`), are located in the `Phase2` folder.
 
 📄 **[To view the full Phase B Project Report (including execution screenshots, efficiency analysis, and performance proofs) - Click Here](./Phase2/Project_Report.md)**
+
+
+## Phase 3: Integration <a name="phase-3"></a>
+Their ERD
+<img width="1362" height="587" alt="ERDPLUSשל הקבוצה השניה" src="https://github.com/user-attachments/assets/e3f954bd-f8a1-45a2-a8b2-9dd482272e32" />
+
+Integration ERD
+<img width="1366" height="592" alt="ERDPLUSמשותף" src="https://github.com/user-attachments/assets/fc7be791-4c34-4410-a1c2-bf1eb5f54b1a" />
+
+# Database Integration & System Unification Report
+
+This document outlines the design decisions, engineering strategies, and physical database operations performed during the system integration stage. The goal was to unify two independently developed database branches into a single, global enterprise schema using PostgreSQL.
+
+---
+
+## 1. Project Background & Unification Objectives
+The primary objective of the integration phase was to merge two distinct subsystems:
+1. **The Core Logistics Branch:** Responsible for managing trips, scheduling, and destination events.
+2. **The Personnel & Resource Management Branch:** Responsible for managing participant registrations, group assignments, and tour guides.
+
+The main technical challenges involved preventing primary key collisions, adapting schema constraints to prevent data loss during merging, and enforcing global referential integrity across both domains without disrupting historical data records.
+
+---
+
+## 2. Key Architectural Decisions
+
+### A. Core Base Table Strategy & Schema Expansion (`ALTER TABLE`)
+Instead of rewriting the entire system architecture from scratch, a strategic decision was made to designate `trip`, `event`, `participant`, and `guide` as the **Global Base Tables**. 
+* **Implementation:** Data from the secondary branch was systematically ingested into these parent tables.
+* **Schema Extension:** To support the unique domain attributes of the secondary branch, the core tables were dynamically extended using `ALTER TABLE ... ADD COLUMN` (e.g., adding `birthdate` to the participant schema, and `groupsize` or `status` attributes to the trip model).
+
+### B. Resolving Primary Key Conflicts Using a 20,000 ID Offset
+Since both database branches were developed in parallel, both environments independently generated auto-incremented primary keys starting from `1`, `2`, `3`, etc. Simply appending records would have caused catastrophic `Unique Constraint Violations`.
+* **Decision:** A fixed numerical **offset of 20,000** was applied to all incoming Primary Keys (IDs) extracted from the secondary branch during the ETL process.
+* **Preserving Referential Integrity:** To maintain correct table relationships, this exact same offset was simultaneously applied to corresponding Foreign Keys during data migration (e.g., in the `event` table, `trip_id` was transformed to `trip_id + 20000` to guarantee that events remained correctly linked to their migrated parent trips).
+
+### C. Constraint Relaxation (`DROP NOT NULL`)
+In the original standalone schemas, columns such as `triptype` or `locationid` were strictly bounded by `NOT NULL` constraints. However, data incoming from the secondary branch lacked these fields natively.
+* **Decision:** We utilized `ALTER COLUMN ... DROP NOT NULL` statements to allow these attributes to accept `NULL` values globally. This defensive modeling decision prevented the integration pipeline from failing due to legacy data gaps.
+
+### D. Guide Entity Consolidation & Data Fallbacks (`COALESCE`)
+In the secondary system branch, tour guides were structured under a different operational logic, with their personal details mapped directly inside a general participant schema.
+* **Decision:** During the data ingestion phase, a `LEFT JOIN` was executed between the `guides` and `participants` source tables. To handle missing name fields gracefully, the SQL query implemented a string concatenation fallback: `COALESCE(p.first_name || ' ' || p.last_name, 'Unknown')`. This ensured that if an integrated guide record lacked a defined name, the pipeline inserted `'Unknown'` rather than causing a null-pointer database crash.
+
+---
+
+## 3. Detailed Step-by-Step Integration Pipeline
+
+### Step 1: Definition of Unique Domain Tables (`CREATE TABLE`)
+New relational models were instantiated to house entity types that were entirely unique to one branch and had no prior equivalent in the base schema, such as `route`, `transport_type`, `schedule`, and `action`.
+* **Key Commands:** `CREATE TABLE IF NOT EXISTS` ensures idempotency, preventing execution errors during script re-runs. Composite Primary Keys—such as `PRIMARY KEY (trip_id, order_num)` in the `schedule` table—were explicitly declared to ensure sequence uniqueness within each discrete trip scope.
+
+### Step 2: Parent Base Schema Realignment (`ALTER TABLE`)
+The core tables were structurally adjusted to match the unified entity definitions, adding missing attributes and stripping restrictive constraints as described in the architectural design decisions.
+* **Key Commands:** * `ALTER TABLE ... ADD COLUMN IF NOT EXISTS` safely injects new attributes without altering existing column data.
+  * `ALTER TABLE ... ALTER COLUMN ... DROP NOT NULL` relaxes constraint rules for cross-system rows.
+
+### Step 3: Extract, Transform, Load - Data Migration (`INSERT INTO ... SELECT`)
+This represents the physical ETL layer of the unification. Rows were extracted from the old legacy models (plural notation, e.g., `trips`), transformed via key offsets (`+ 20000`), and loaded directly into the unified global tables (singular notation, e.g., `trip`).
+* **Key Commands:** A combination of target `INSERT INTO` declarations bound with relational source `SELECT` queries allowed real-time data translation during the ingestion flow.
+
+### Step 4: Re-Enforcing Relational Integrity (`ADD CONSTRAINT FOREIGN KEY`)
+During the bulk loading phase in Step 3, cross-table foreign key validations were temporarily omitted to allow seamless record insertions independent of execution order. Once all datasets were loaded and synchronized, the final referential integrity rules were hardcoded.
+* **Key Commands:** `ALTER TABLE ... ADD CONSTRAINT ... FOREIGN KEY (...) REFERENCES ...` locked down the database schema. This step ensures that future transactions cannot violate business rules (e.g., adding a sub-`action` that points to a non-existent parent `event`).
+
+### Step 5: Post-Integration Database Cleansing (`DROP TABLE ... CASCADE`)
+Once audit checks verified that 100% of the historical records were safely transformed and migrated into the global schema, the redundant, duplicate staging tables from the secondary branch were decommissioned.
+* **Key Commands:** `DROP TABLE IF EXISTS ... CASCADE`. The inclusion of the **`CASCADE`** modifier is a vital component here; it instructs PostgreSQL to drop the obsolete tables along with any old associated view structures, triggers, or index keys, leaving behind a clean, high-performance, unified database environment.
+*
+
+### System Views & Verification Artifacts
+### Our View
+
+[Queries](./Phase3/otherProjectView.sql)
+
+<br>
+
+<img width="883" height="396" alt="OURVIEW1jpeg" src="https://github.com/user-attachments/assets/5b1d2ae3-301f-4c4b-9378-7d514d68867d" />
+
+<br>
+
+<img width="925" height="274" alt="OURVIEW2" src="https://github.com/user-attachments/assets/823e7900-084d-4111-93c6-34d3414c9dc6" />
+
+<br>
+
+### Their View
+
+[Queries](./Phase3/ourProjectView.sql)
+
+<br>
+
+<img width="743" height="267" alt="THEIRVIEW2" src="https://github.com/user-attachments/assets/2d29149c-8186-43ad-806c-8a2a4f3d4c5d" />
+
+<br>
+
+<img width="394" height="263" alt="THEIRVIEW1" src="https://github.com/user-attachments/assets/1ab36417-27fa-4976-b39d-ae508bdf20eb" />
+
+<br>
+
+---
+
+### Backup Registry
+
+[backup3](./Phase3/backup3)
