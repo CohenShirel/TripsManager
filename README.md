@@ -13,6 +13,8 @@
   * [Backup](#backup)
 * [Phase 2: Queries](#phase-2)
 * [Phase 3: Integration](#phase-3)
+* [Phase 4: PL/pgSQL Development](#phase-4)
+
 
 ## Phase 1: Design and Build the Database <a name="phase-1"></a>
 
@@ -223,3 +225,69 @@ Once audit checks verified that 100% of the historical records were safely trans
 ### Backup Registry
 
 [backup3](./Phase3/backup3)
+### Phase 4: PL/pgSQL Development <a name="phase-4"></a>
+
+This phase covers the development and verification of non-trivial PL/pgSQL programs integrated into the database architecture.
+
+---
+
+#### 📜 [Functions Code File](./Phase4/Functions.sql)
+
+##### 🔹 Function 1: Trip Total Cost Calculation
+* **Description:** Calculates the total estimated cost of a trip by multipling route distance and compiling explicit cursor records of scheduled event costs. Includes validation exceptions.
+
+<p align="center">
+  <img width="90%" alt="FUNC1" src="https://github.com/user-attachments/assets/43b3c7ce-de01-4ca5-8f5b-8091add416cb" />
+</p>
+
+* **Exception Handling Verification:**
+<p align="center">
+  <img width="90%" alt="FUNC1ERROR" src="https://github.com/user-attachments/assets/c887bd8d-c51a-469e-af91-5235952fed85" />
+</p>
+
+<br/>
+
+##### 🔹 Function 2: Filter Trips by Region (Ref Cursor)
+* **Description:** Dynamically generates and returns a ref cursor containing all scheduled trips within a specified geographic area, integrating input parameter validation.
+
+<p align="center">
+  <img width="90%" alt="FUNC2" src="https://github.com/user-attachments/assets/354d1986-01e9-4e7a-a573-9f9e6dc1b179" />
+</p>
+
+* **Exception Handling Verification:**
+<p align="center">
+  <img width="90%" alt="FUNC2ERROR" src="https://github.com/user-attachments/assets/84041140-194d-449e-98dd-7020e50610e6" />
+</p>
+
+---
+
+#### 📜 [Procedures Code File](./Phase4/Procedures.sql)
+
+##### 🔸 Procedure 1: Bulk Update Trip Status by Group Age
+* **Description:** Automatically processes all trips via an implicit cursor loop, calculates participant age averages, and updates statuses accordingly with notice logs.
+
+<p align="center">
+  <img width="90%" alt="PROCEDURE1" src="https://github.com/user-attachments/assets/5168f94a-eb4c-4464-9b25-a669a1e4392e" />
+</p>
+
+<br/>
+
+##### 🔸 Procedure 2: Allocate VIP Trip Type
+* **Description:** Scans database records and automatically re-evaluates trip classifications, updating small group sizes ($\le 10$ participants) to 'VIP' status.
+
+* **Execution Verification (Before and After):**
+
+###### 1. Initial State (Before Execution):
+<p align="center">
+  <img width="60%" alt="PROCEDURE2BEFORE" src="https://github.com/user-attachments/assets/2cc43ce8-ab04-40e1-b6ef-32f9a3ff9794" />
+</p>
+
+###### 2. Procedure Call and Notice Outputs:
+<p align="center">
+  <img width="80%" alt="PROCEDURE2AFTER2" src="https://github.com/user-attachments/assets/e96c2085-ac29-474e-8c54-c51287793e97" />
+</p>
+
+###### 3. Final State Verification (After Execution):
+<p align="center">
+  <img width="80%" alt="PROCEDURE2AFTER1" src="https://github.com/user-attachments/assets/6eeeef4f-d0ff-4853-a306-f7156c14cb7b" />
+</p>
