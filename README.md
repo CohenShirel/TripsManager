@@ -291,3 +291,57 @@ This phase covers the development and verification of non-trivial PL/pgSQL progr
 <p align="center">
   <img width="80%" alt="PROCEDURE2AFTER1" src="https://github.com/user-attachments/assets/6eeeef4f-d0ff-4853-a306-f7156c14cb7b" />
 </p>
+
+---
+
+---
+
+#### 📜 [Triggers Code File](./Phase4/Triggers.sql)
+
+##### 🔹 Trigger 1: Group Size Hard Limit Validation
+* **Description:** Automatically prevents updating a trip's maximum group size to an invalid value (less than or equal to 0) or to a value lower than the actual number of currently registered participants found in database relations.
+
+<p align="center">
+  <img width="90%" alt="Trigger 1 Validation Rule" src="./images/trigger1.jpg" />
+</p>
+
+* **Exception Handling Verification:**
+<p align="center">
+  <img width="90%" alt="Trigger 1 Exception Output" src="./images/main1.jpg" />
+</p>
+
+<br/>
+
+##### 🔹 Trigger 2: Guide Overbooking Prevention
+* **Description:** Monitors event scheduling during data insertions, automatically ensuring that the assigned guide does not have any other conflicting events at the exact same date and time.
+
+<p align="center">
+  <img width="90%" alt="Trigger 2 Conflict Rule" src="./images/trigger2.jpg" />
+</p>
+
+* **Exception Handling Verification:**
+<p align="center">
+  <img width="90%" alt="Trigger 2 Exception Output" src="./images/main2.jpg" />
+</p>
+
+---
+
+#### 📜 [Main Execution Programs File](./Phase4/MainPrograms.sql)
+
+##### 💻 Main Program 1: Costing, Age Evaluation & Capacity Guard
+* **Description:** An atomic orchestration block that compiles the trip budget, updates the age demographics logs via the implicit cursor, and triggers the hard capacity guard to verify the transaction boundary state.
+
+* **Execution Runtime Logs & Verification:**
+<p align="center">
+  <img width="90%" alt="Main Program 1 Verification" src="./images/main1.jpg" />
+</p>
+
+<br/>
+
+##### 💻 Main Program 2: Regional Dispatch, VIP Classification & Schedule Validation
+* **Description:** Opens a dynamic reference cursor to stream localized trip workflows, executes batch VIP upgrades for low-capacity metrics, and forces a scheduling collision to assert database exception recovery.
+
+* **Execution Runtime Logs & Verification:**
+<p align="center">
+  <img width="90%" alt="Main Program 2 Verification" src="./images/main2.jpg" />
+</p>
