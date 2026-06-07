@@ -1,0 +1,2 @@
+-- בשלב זה לא בוצעו שינויים במבנה הטבלאות 
+--(No ALTER TABLE commands required for Stage D)
