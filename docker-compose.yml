@@ -37,6 +37,26 @@ services:
     networks:
       - zoo_network
 
+  # -------------------------
+  # Web Application
+  # -------------------------
+  web:
+    build: .
+    container_name: TripsManager_Web
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: db
+      DB_USER: ${DB_USER_SECRET}
+      DB_PASSWORD: ${DB_PASSWORD_SECRET}
+      DB_NAME: ${DB_NAME_SECRET}
+      DB_PORT: 5432
+    depends_on:
+      - db
+    networks:
+      - zoo_network
+
 # -------------------------
 # Volumes
 # -------------------------

@@ -343,3 +343,89 @@ This phase covers the development and verification of non-trivial PL/pgSQL progr
 <p align="center">
   <img width="90%" alt="Main Program 2 Verification" src="./images/main2.jpg" />
 </p>
+
+# Phase 5 Report - Integration and Web Application Development
+
+## How to Run the Application
+
+To run the system locally, ensure that Docker and Docker Compose are installed on your machine.
+
+1. Open your terminal/command prompt and navigate to the main project directory (`TripsManager`).
+2. Run the following command to build and start all containers (Database, pgAdmin, and Web App):
+   ```bash
+   docker compose up -d --build
+   ```
+3. Once the command finishes executing, the application will be available in your browser at:
+   [http://localhost:5000](http://localhost:5000)
+4. (Optional) To access the pgAdmin database management interface, navigate to:
+   [http://localhost:8080](http://localhost:8080) using the credentials defined in your `.env` file.
+
+---
+
+## Workflow and Technologies Used
+
+The application was built using a modern Client-Server architecture, integrating a relational database, a backend server, and a visual frontend client.
+
+### Tools and Technologies:
+* **Backend:** 
+  * **Python & Flask:** We used the Flask framework to build the server's API. The server handles HTTP requests, manages routing, and acts as the bridge between the client and the database.
+  * **psycopg2:** A PostgreSQL database adapter for Python that allowed us to connect to the database, execute complex queries, call PL/SQL functions/procedures, and return the results to the client as JSON.
+* **Database:** 
+  * **PostgreSQL:** The relational database storing all the data, tables, functions, and triggers created in the previous phases.
+* **Frontend:** 
+  * **HTML5, CSS3, Vanilla JavaScript:** We built a responsive and modern User Interface (UI). 
+  * We designed an "Advanced Panel" featuring a "Cyber Console" to display the complex outputs of our PL/SQL functions in a spectacular and technological way.
+  * We utilized the JavaScript Fetch API to communicate with the server asynchronously (AJAX) without requiring page reloads.
+  * Integrated dynamic UI Avatars and Unsplash image APIs to give the application a premium SaaS look.
+* **DevOps & Infrastructure:**
+  * **Docker & Docker Compose:** Containerized the system into separate services (Web, DB, pgAdmin) to guarantee that the system runs smoothly on any machine with a single command.
+
+### Workflow:
+1. **Environment Setup:** Created `Dockerfile` and `docker-compose.yml` configurations to link the Python application with the existing database, utilizing a `.env` file for secure credential management.
+2. **API Development (Backend):** Developed `app.py` containing endpoints for all CRUD operations on our entities (Trips, Groups, Participants, etc.), as well as dedicated routes to trigger our PL/SQL functions and complex queries.
+3. **UI Development (Frontend):** Designed the layouts using HTML and CSS, and created interactive Modals for adding, editing, and deleting records dynamically.
+4. **Integration:** Connected the client-side `app.js` to send requests to the server routes, parse the JSON responses, and dynamically render the data into modern grids and tables.
+
+---
+
+## Application Screenshots
+
+### Login & Registration Screen
+*This is the authentication gateway. It handles user login and new admin registration securely before granting access to the system.*
+![Login Screen](images/entry_screen.jpg)
+
+### Main Dashboard
+*The central hub providing a high-level overview of system metrics, key statistics, and a timeline of upcoming trips.*
+![Dashboard](images/dashboard.jpg)
+
+### Trips Catalog (Premium UI)
+*Displays all trips in a modern grid layout using dynamic destination images. From here, trips can be added, edited, or deleted.*
+![Trips Grid](images/TRIPS.jpg)
+
+### Groups Management
+*Shows the management table for travel groups, featuring dynamic UI avatars and gradient badges for a professional look.*
+![Groups Table](images/GROUPS.jpg)
+
+### Guides Roster
+*A comprehensive list of all professional guides, their specializations, and contact details, paired with dynamic profile avatars.*
+![Guides Roster](images/GUIDES.jpg)
+
+### Participants Directory
+*The directory for all travelers/participants. Includes full CRUD functionality to update personal information and birthdates.*
+![Participants Directory](images/PARTICIPANTS.jpg)
+
+### Events Schedule
+*A timeline and management interface for specific daily events, allowing the assignment of activities to particular trips and locations.*
+![Events Schedule](images/EVENTS.jpg)
+
+### Locations Database
+*Displays the geographical locations and sites available in the system, which are used to build trip itineraries and events.*
+![Locations Database](images/LOCATIONS.jpg)
+
+### Advanced Panel - Operations
+*The control center for executing complex backend logic. It includes interfaces for running specific queries, PL/SQL functions, and stored procedures.*
+![Advanced Panel Operations](images/ADVENCEDPANEL.jpg)
+
+### Advanced Panel - Cyber Console Output
+*The output terminal (Cyber Console) displaying the results of the executed PL/SQL functions and queries in a sleek, hacker-style UI with glowing green text.*
+![Cyber Console Output](images/console_screen.jpg)
