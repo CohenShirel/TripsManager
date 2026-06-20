@@ -14,6 +14,7 @@
 * [Phase 2: Queries](#phase-2)
 * [Phase 3: Integration](#phase-3)
 * [Phase 4: PL/pgSQL Development](#phase-4)
+* [Phase 5:  Integration and Web Application Development](#phase-5)
 
 
 ## Phase 1: Design and Build the Database <a name="phase-1"></a>
@@ -344,7 +345,7 @@ This phase covers the development and verification of non-trivial PL/pgSQL progr
   <img width="90%" alt="Main Program 2 Verification" src="./images/main2.jpg" />
 </p>
 
-# Phase 5 Report - Integration and Web Application Development
+# Phase 5 Report - Integration and Web Application Development <a name="phase-5"></a>
 
 ## How to Run the Application
 
