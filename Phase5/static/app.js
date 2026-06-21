@@ -337,20 +337,7 @@ function loadFormHelpers(entityType) {
         fetchHelperList("trips", "event-trip-select");
         fetchHelperList("poi", "event-location-select");
     } else if (entityType === "location") {
-        const regionSelect = document.getElementById("loc-region-select");
-        if (regionSelect) {
-            fetch("/api/helpers/regions")
-                .then(res => res.json())
-                .then(data => {
-                    regionSelect.innerHTML = '<option value="">Select Region...</option>';
-                    data.forEach(region => {
-                        const opt = document.createElement("option");
-                        opt.value = region;
-                        opt.textContent = region;
-                        regionSelect.appendChild(opt);
-                    });
-                });
-        }
+        // Regions are statically defined in index.html, no need to fetch dynamically.
     }
 }
 
