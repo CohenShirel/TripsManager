@@ -57,9 +57,13 @@ This structured database helps **streamline tour and event operations**, improvi
 
 
 ### ERD (Entity-Relationship Diagram) <a name="erd"></a>
+  📜 [Trip.erdplus](./Phase1/)
+
 <img width="4002" height="1533" alt="erdplus (8)" src="https://github.com/user-attachments/assets/2d23cf47-ea7d-44bd-a503-7845f65ac55e" />
 
 ### DSD (Data Structure Diagram) <a name="dsd"></a>
+   📜 [TRIP-Relational Schema.erdplus](./Phase1/)
+
 <img width="4002" height="1533" alt="erdplus (6)" src="https://github.com/user-attachments/assets/4d5fd525-376a-4f41-b061-05365b5e516b" />
 
 ### SQL Scripts <a name="scripts"></a>
