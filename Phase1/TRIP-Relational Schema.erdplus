@@ -1,0 +1,805 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "29dc0607-5ecb-42bc-bf2f-bf97e308613b",
+        "type": "Table",
+        "position": {
+          "x": -685.1210668648737,
+          "y": 234.6792625377002
+        },
+        "data": {
+          "label": "GUIDE",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "fba7bb5a-9194-4a48-aea2-c69352277e04",
+              "name": "GuideId",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "7ec6634a-95c5-4740-ae5a-05d070bfbed3",
+              "name": "GuideName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d4efd88f-f0a0-4337-8200-aad7626667d0",
+              "name": "Phone",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": true
+            },
+            {
+              "id": "30374365-15e1-40a7-91d8-a5d5585c0726",
+              "name": "Email",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": true
+            },
+            {
+              "id": "cb8dead6-569f-45b3-b5a3-fc686b264c3d",
+              "name": "Specialization",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "09f8afe0-89d5-4f67-8f7e-c6f96e03aa7c",
+              "name": "Region",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "8d490de3-5379-426f-8a36-ebd342ea7da6",
+              "name": "ExperienceYears",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 201
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "b192d8d7-3d5b-4e7d-9ef2-3c503c613395",
+        "type": "Table",
+        "position": {
+          "x": 564.9904641541465,
+          "y": 301.94899825122445
+        },
+        "data": {
+          "label": "PARTICIPANT",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "9be662bf-2cef-4a93-a51a-5f15d9df2a35",
+              "name": "ParticipantID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "e4c57d4b-89bf-4349-8611-8d625b52aa90",
+              "name": "LastName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "43535c80-0428-443a-8165-d90169a1b4f2",
+              "name": "FirstName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "ef617560-8b0c-49ae-bb4f-2475d46bdf85",
+              "name": "Phone",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": true
+            },
+            {
+              "id": "8da6114d-e51d-4bef-947d-ac134e529db4",
+              "name": "Email",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": true
+            },
+            {
+              "id": "b404906a-8af8-442d-9f52-2490efb157ab",
+              "name": "Age",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 176
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+        "type": "Table",
+        "position": {
+          "x": -128.25602036334763,
+          "y": 455.47411261368995
+        },
+        "data": {
+          "label": "TRIP",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "db8ab2c3-49ac-4b51-a5ff-ccd6962c0128",
+              "name": "TripId",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "b9fb7685-3d0e-4326-81c8-98fab8799d3a",
+              "name": "TripName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "452b2c2f-e96b-4af3-a334-abce508f72fd",
+              "name": "StartDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "5b30e93b-5d6b-4182-8e1b-b35d55333723",
+              "name": "EndDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "877b392c-3d5f-4a3d-958b-c9f5baaa8bd8",
+              "name": "TripType",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "85833f3d-efe1-4e87-a202-ef60f2e08854",
+              "name": "fk_GUIDE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "8e2de6ad-786c-4913-a982-1029ce0997ed",
+                "sourceTableId": "29dc0607-5ecb-42bc-bf2f-bf97e308613b",
+                "columns": [
+                  {
+                    "id": "fk_fba7bb5a-9194-4a48-aea2-c69352277e04",
+                    "name": "GuideId",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 177
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+        "type": "Table",
+        "position": {
+          "x": -136.23323372740833,
+          "y": -43.879899186182
+        },
+        "data": {
+          "label": "GROUP",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "140a5ec9-218b-4f79-a2eb-25c7253becc8",
+              "name": "GroupId",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "17e65578-7768-4fe6-97a9-161ee000b6bb",
+              "name": "GroupName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "448c9b96-a71a-4332-b5c6-84ddfacff8ff",
+              "name": "Description",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": true
+            },
+            {
+              "id": "694afadb-51c2-441d-b9a7-8856de396eb0",
+              "name": "CreatedDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "2e00af5d-e214-47eb-af5f-f97e665e8890",
+              "name": "fk_GUIDE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "bf589f0f-69e2-4bf1-9cb7-81bf8dc92715",
+                "sourceTableId": "29dc0607-5ecb-42bc-bf2f-bf97e308613b",
+                "columns": [
+                  {
+                    "id": "fk_fba7bb5a-9194-4a48-aea2-c69352277e04",
+                    "name": "GuideId",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 152
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "6c0d1d77-659a-473c-be89-3e2cbe6e1b66",
+        "type": "Table",
+        "position": {
+          "x": 253.64279836077333,
+          "y": 512.3854022331453
+        },
+        "data": {
+          "label": "EVENTREGISTRATION",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "0de620d1-f78d-409d-abc3-5071a627190b",
+              "name": "RegistrationId",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "9c2e788e-5f3c-4196-b646-6aedbe50af26",
+              "name": "RegistrationDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "ad44b325-4dd7-42c5-97d9-03755a838af2",
+              "name": "fk_EVENT",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "fba85a02-00c2-4b37-9a79-3589f93f614d",
+                "sourceTableId": "b9f5ac6e-60d8-4798-a93c-5c6fe8eea559",
+                "columns": [
+                  {
+                    "id": "fk_e28ee56b-d376-490d-bc67-9ac5c1f4c4c8",
+                    "name": "EventId",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": true
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 102
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "b9f5ac6e-60d8-4798-a93c-5c6fe8eea559",
+        "type": "Table",
+        "position": {
+          "x": 258.58444308921764,
+          "y": 653.6122624178049
+        },
+        "data": {
+          "label": "EVENT",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "e28ee56b-d376-490d-bc67-9ac5c1f4c4c8",
+              "name": "EventId",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "8d112652-36a6-417d-9a3c-8c028072dbb1",
+              "name": "EventName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "befb071b-aab8-4429-b9d5-008813e10ec9",
+              "name": "EventDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d98786ef-7fb3-4591-bcc6-07267ad69cc7",
+              "name": "EventTime",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "682e6eba-ecf2-47b0-999c-1127b43adf48",
+              "name": "fk_TRIP",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "66168159-4e16-4fe9-b626-ae8c4937262e",
+                "sourceTableId": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+                "columns": [
+                  {
+                    "id": "fk_db8ab2c3-49ac-4b51-a5ff-ccd6962c0128",
+                    "name": "TripId",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": true
+            },
+            {
+              "id": "5dd564d0-cc58-4a71-8328-ebfe4cda6e26",
+              "name": "fk_LOCATION",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "c72586b2-75ad-4028-bb4f-0b2698a41952",
+                "sourceTableId": "d088b660-85ef-4fcd-8c31-12774a0a0349",
+                "columns": [
+                  {
+                    "id": "fk_9d0a2cc6-cd96-448d-a53b-e8df12045a3f",
+                    "name": "LocationID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 177
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "d088b660-85ef-4fcd-8c31-12774a0a0349",
+        "type": "Table",
+        "position": {
+          "x": 548.044527140778,
+          "y": 608.1855536266346
+        },
+        "data": {
+          "label": "LOCATION",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "9d0a2cc6-cd96-448d-a53b-e8df12045a3f",
+              "name": "LocationID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "98eebdeb-6a04-48be-9eb5-6ffcf53d4be0",
+              "name": "LocationName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "3bb41bfe-1f15-4bcb-ad36-cbb36efdace2",
+              "name": "Region",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "2e69a8d7-4590-42c5-9bae-2f0e7b224d0e",
+              "name": "Address",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "c1c6ed62-2935-4ccf-8975-b7ea6436bef5",
+              "name": "Description",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isOptional": true
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 151
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "306d77ce-5dd0-4f1d-8b97-abe3c78e75fb",
+        "type": "Table",
+        "position": {
+          "x": 255.37861521336907,
+          "y": 301.5345495325212
+        },
+        "data": {
+          "label": "PARTICIPANTGROUP",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "7548704e-f50e-4c24-a372-d16f5ab58102",
+              "name": "fk_PARTICIPANT",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "647ea293-a105-43c3-9134-0119922ea46a",
+                "sourceTableId": "b192d8d7-3d5b-4e7d-9ef2-3c503c613395",
+                "columns": [
+                  {
+                    "id": "fk_9be662bf-2cef-4a93-a51a-5f15d9df2a35",
+                    "name": "ParticipantID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "b9e549f9-376a-4245-9787-29d71d3af9bf",
+              "name": "fk_GROUP",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "b0b1d54c-72cb-4ebb-a642-492596ce1365",
+                "sourceTableId": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+                "columns": [
+                  {
+                    "id": "fk_140a5ec9-218b-4f79-a2eb-25c7253becc8",
+                    "name": "GroupId",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "6bb3f63e-4deb-4351-aa3b-9c663fc99c34",
+        "type": "Table",
+        "position": {
+          "x": -137.24462704537797,
+          "y": 192.79710671375398
+        },
+        "data": {
+          "label": "GROUPTRIP",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "40b0c70e-60d8-4382-8552-ea3b141dd70b",
+              "name": "fk_GROUP",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "e2acaa64-98d8-421b-9d28-caf1a11a6748",
+                "sourceTableId": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+                "columns": [
+                  {
+                    "id": "fk_140a5ec9-218b-4f79-a2eb-25c7253becc8",
+                    "name": "GroupId",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "33ddd9f7-a50a-4662-98b2-81e077137327",
+              "name": "fk_TRIP",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "24745811-da7d-4b82-9a9a-2c52cb2baff8",
+                "sourceTableId": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+                "columns": [
+                  {
+                    "id": "fk_db8ab2c3-49ac-4b51-a5ff-ccd6962c0128",
+                    "name": "TripId",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 78
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "29dc0607-5ecb-42bc-bf2f-bf97e308613b->ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a_8e2de6ad-786c-4913-a982-1029ce0997ed",
+        "type": "Relational",
+        "source": "29dc0607-5ecb-42bc-bf2f-bf97e308613b",
+        "targetHandle": "foreign-key-handle-8e2de6ad-786c-4913-a982-1029ce0997ed",
+        "target": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "8e2de6ad-786c-4913-a982-1029ce0997ed",
+            "sourceTableId": "29dc0607-5ecb-42bc-bf2f-bf97e308613b",
+            "columns": [
+              {
+                "id": "fk_fba7bb5a-9194-4a48-aea2-c69352277e04",
+                "name": "GuideId",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "29dc0607-5ecb-42bc-bf2f-bf97e308613b->d3c333dc-d617-4511-8626-2b8707bfd1d3_bf589f0f-69e2-4bf1-9cb7-81bf8dc92715",
+        "type": "Relational",
+        "source": "29dc0607-5ecb-42bc-bf2f-bf97e308613b",
+        "targetHandle": "foreign-key-handle-bf589f0f-69e2-4bf1-9cb7-81bf8dc92715",
+        "target": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "bf589f0f-69e2-4bf1-9cb7-81bf8dc92715",
+            "sourceTableId": "29dc0607-5ecb-42bc-bf2f-bf97e308613b",
+            "columns": [
+              {
+                "id": "fk_fba7bb5a-9194-4a48-aea2-c69352277e04",
+                "name": "GuideId",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "b9f5ac6e-60d8-4798-a93c-5c6fe8eea559->6c0d1d77-659a-473c-be89-3e2cbe6e1b66_fba85a02-00c2-4b37-9a79-3589f93f614d",
+        "type": "Relational",
+        "source": "b9f5ac6e-60d8-4798-a93c-5c6fe8eea559",
+        "targetHandle": "foreign-key-handle-fba85a02-00c2-4b37-9a79-3589f93f614d",
+        "target": "6c0d1d77-659a-473c-be89-3e2cbe6e1b66",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "fba85a02-00c2-4b37-9a79-3589f93f614d",
+            "sourceTableId": "b9f5ac6e-60d8-4798-a93c-5c6fe8eea559",
+            "columns": [
+              {
+                "id": "fk_e28ee56b-d376-490d-bc67-9ac5c1f4c4c8",
+                "name": "EventId",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a->b9f5ac6e-60d8-4798-a93c-5c6fe8eea559_66168159-4e16-4fe9-b626-ae8c4937262e",
+        "type": "Relational",
+        "source": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+        "targetHandle": "foreign-key-handle-66168159-4e16-4fe9-b626-ae8c4937262e",
+        "target": "b9f5ac6e-60d8-4798-a93c-5c6fe8eea559",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "66168159-4e16-4fe9-b626-ae8c4937262e",
+            "sourceTableId": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+            "columns": [
+              {
+                "id": "fk_db8ab2c3-49ac-4b51-a5ff-ccd6962c0128",
+                "name": "TripId",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "d088b660-85ef-4fcd-8c31-12774a0a0349->b9f5ac6e-60d8-4798-a93c-5c6fe8eea559_c72586b2-75ad-4028-bb4f-0b2698a41952",
+        "type": "Relational",
+        "source": "d088b660-85ef-4fcd-8c31-12774a0a0349",
+        "targetHandle": "foreign-key-handle-c72586b2-75ad-4028-bb4f-0b2698a41952",
+        "target": "b9f5ac6e-60d8-4798-a93c-5c6fe8eea559",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "c72586b2-75ad-4028-bb4f-0b2698a41952",
+            "sourceTableId": "d088b660-85ef-4fcd-8c31-12774a0a0349",
+            "columns": [
+              {
+                "id": "fk_9d0a2cc6-cd96-448d-a53b-e8df12045a3f",
+                "name": "LocationID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "b192d8d7-3d5b-4e7d-9ef2-3c503c613395->306d77ce-5dd0-4f1d-8b97-abe3c78e75fb_647ea293-a105-43c3-9134-0119922ea46a",
+        "type": "Relational",
+        "source": "b192d8d7-3d5b-4e7d-9ef2-3c503c613395",
+        "targetHandle": "foreign-key-handle-647ea293-a105-43c3-9134-0119922ea46a",
+        "target": "306d77ce-5dd0-4f1d-8b97-abe3c78e75fb",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "647ea293-a105-43c3-9134-0119922ea46a",
+            "sourceTableId": "b192d8d7-3d5b-4e7d-9ef2-3c503c613395",
+            "columns": [
+              {
+                "id": "fk_9be662bf-2cef-4a93-a51a-5f15d9df2a35",
+                "name": "ParticipantID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "d3c333dc-d617-4511-8626-2b8707bfd1d3->306d77ce-5dd0-4f1d-8b97-abe3c78e75fb_b0b1d54c-72cb-4ebb-a642-492596ce1365",
+        "type": "Relational",
+        "source": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+        "targetHandle": "foreign-key-handle-b0b1d54c-72cb-4ebb-a642-492596ce1365",
+        "target": "306d77ce-5dd0-4f1d-8b97-abe3c78e75fb",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "b0b1d54c-72cb-4ebb-a642-492596ce1365",
+            "sourceTableId": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+            "columns": [
+              {
+                "id": "fk_140a5ec9-218b-4f79-a2eb-25c7253becc8",
+                "name": "GroupId",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "d3c333dc-d617-4511-8626-2b8707bfd1d3->6bb3f63e-4deb-4351-aa3b-9c663fc99c34_e2acaa64-98d8-421b-9d28-caf1a11a6748",
+        "type": "Relational",
+        "source": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+        "targetHandle": "foreign-key-handle-e2acaa64-98d8-421b-9d28-caf1a11a6748",
+        "target": "6bb3f63e-4deb-4351-aa3b-9c663fc99c34",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "e2acaa64-98d8-421b-9d28-caf1a11a6748",
+            "sourceTableId": "d3c333dc-d617-4511-8626-2b8707bfd1d3",
+            "columns": [
+              {
+                "id": "fk_140a5ec9-218b-4f79-a2eb-25c7253becc8",
+                "name": "GroupId",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a->6bb3f63e-4deb-4351-aa3b-9c663fc99c34_24745811-da7d-4b82-9a9a-2c52cb2baff8",
+        "type": "Relational",
+        "source": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+        "targetHandle": "foreign-key-handle-24745811-da7d-4b82-9a9a-2c52cb2baff8",
+        "target": "6bb3f63e-4deb-4351-aa3b-9c663fc99c34",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "24745811-da7d-4b82-9a9a-2c52cb2baff8",
+            "sourceTableId": "ca3781c3-c5e6-4ae9-a5dd-c9b292e7459a",
+            "columns": [
+              {
+                "id": "fk_db8ab2c3-49ac-4b51-a5ff-ccd6962c0128",
+                "name": "TripId",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": 586.5999384607469,
+      "y": -45.65464682719292,
+      "zoom": 0.5333789493894625
+    }
+  },
+  "name": "TRIP-Relational Schema",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 261596
+  },
+  "id": 370705,
+  "updatedAtTimestamp": 1778671147
+}
